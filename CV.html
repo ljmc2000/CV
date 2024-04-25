@@ -169,7 +169,7 @@
 			portfolio_item.appendChild(source)
 
 			var live_link=document.createElement("span")
-			live_link.innerHTML=` (`
+			live_link.innerHTML=` `
 			portfolio_item.appendChild(live_link)
 
 			var a, demos
@@ -181,7 +181,9 @@
 				a.innerText=demos[j][0]
 				a.href=demos[j][1]
 				a.classList.add("extra_visible")
-				live_link.innerHTML+=a.outerHTML+(j==penultimate?`)`:`|`)
+				live_link.innerHTML+=a.outerHTML
+				if(j!=penultimate)
+					live_link.innerHTML+=` `
 			}
 
 			/*
