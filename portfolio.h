@@ -9,8 +9,8 @@ var portfolio_projects = [
 		preview: "Chessboard2Net.png",
 		source: "https://github.com/ljmc2000/Chessboard2Net",
 		demos: [
-			['video', "https://www.youtube.com/watch?v=jRb4yOLAqn8"],
-			['live', "https://chessboardnet.delilahsthings.ie"],
+			{label: "video", link: "https://www.youtube.com/watch?v=jRb4yOLAqn8"},
+			{label: "live", link: "https://chessboardnet.delilahsthings.ie"},
 		],
 	},
 	{
@@ -20,7 +20,7 @@ var portfolio_projects = [
 		source: "https://github.com/ljmc2000/Chessboard.net",
 		preview: "ChessboardPreview.png",
 		demos: [
-			['video', "https://youtu.be/MnvaOpltS2Y"],
+			{label: "video", link: "https://youtu.be/MnvaOpltS2Y"},
 		],
 	},
 	{
@@ -30,8 +30,8 @@ var portfolio_projects = [
 		preview: "NoiseLooperPreview.png",
 		source: "https://github.com/ljmc2000/NoiseLooper",
 		demos: [
-			['video', "https://youtu.be/LIJsYYhpsC0"],
-			['fdroid', "https://f-droid.org/en/packages/ie.delilahsthings.soothingloop/"],
+			{label: "video", link: "https://youtu.be/LIJsYYhpsC0"},
+			{label: "fdroid", link: "https://f-droid.org/en/packages/ie.delilahsthings.soothingloop/"},
 		],
 	},
 	{
@@ -41,7 +41,7 @@ var portfolio_projects = [
 		preview: "NothesiaPreview.png",
 		source: "https://github.com/ljmc2000/nothesia",
 		demos: [
-			['video', "https://youtu.be/h44gcPVK7eA"],
+			{label: "video", link: "https://youtu.be/h44gcPVK7eA"},
 		],
 	},
 	{
@@ -51,7 +51,7 @@ var portfolio_projects = [
 		preview: "VirtualConcertHallPreview.png",
 		source: "https://github.com/ljmc2000/VirtualConcertHall",
 		demos: [
-			['video', "https://www.youtube.com/watch?v=8XXBoIQZL4s"],
+			{label: "video", link: "https://www.youtube.com/watch?v=8XXBoIQZL4s"},
 		],
 	},
 	{
@@ -61,9 +61,9 @@ var portfolio_projects = [
 		preview: "FishyChips.png",
 		source: "https://github.com/ljmc2000/fishy-chips",
 		demos: [
-			['video', "https://youtube.com/watch?v=jvCFFNhoMMQ"],
-			[ 'v1', "https://fishychipsv1.delilahsthings.ie"],
-			[ 'v2', "https://fishychipsv2.delilahsthings.ie"],
+			{label: "video", link: "https://youtube.com/watch?v=jvCFFNhoMMQ"},
+			{label: "v1", link: "https://fishychipsv1.delilahsthings.ie"},
+			{label: "v2", link: "https://fishychipsv2.delilahsthings.ie"},
 		],
 	},
 	{
@@ -73,7 +73,7 @@ var portfolio_projects = [
 		preview: "ChristmasTreesPreview.png",
 		source: "https://github.com/ljmc2000/GameEngines1Assignment",
 		demos: [
-			['video', "https://www.youtube.com/watch?v=ltsh8RBHQcY"],
+			{label: "video", link: "https://www.youtube.com/watch?v=ltsh8RBHQcY"},
 		],
 	},
 	{
@@ -83,7 +83,7 @@ var portfolio_projects = [
 		preview: "SolarSystemPreview.png",
 		source: "https://github.com/ljmc2000/solar-system",
 		demos: [
-			['video', "https://www.youtube.com/watch?v=0rkvRAaAAcE"],
+			{label: "video", link: "https://www.youtube.com/watch?v=0rkvRAaAAcE"},
 		],
 	},
 ]

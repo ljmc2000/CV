@@ -178,8 +178,8 @@
 			{
 				a=document.createElement("a")
 				demos=portfolio_projects[i].demos
-				a.innerText=demos[j][0]
-				a.href=demos[j][1]
+				a.innerText=demos[j].label
+				a.href=demos[j].link
 				a.classList.add("extra_visible")
 				live_link.innerHTML+=a.outerHTML
 				if(j!=penultimate)
