@@ -1,0 +1,10 @@
+#ifndef PERSONAL_INFORMATION_H
+#define PERSONAL_INFORMATION_H
+
+#define NAME
+#define EMAIL
+#define LINKEDIN
+#define LINKEDIN_HTTPS
+#define CELLNUMBER
+
+#endif
