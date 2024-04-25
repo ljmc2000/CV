@@ -5,6 +5,7 @@ body {
 .extra_visible {
 	color: red;
 	font-weight: bolder;
+	text-decoration: none;
 }
 .header {
 	display: inline-flex;
