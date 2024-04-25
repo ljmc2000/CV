@@ -9,7 +9,7 @@ var portfolio_projects = [
 		preview: "Chessboard2Net.png",
 		source: "https://github.com/ljmc2000/Chessboard2Net",
 		demos: [
-			['youtube', "https://www.youtube.com/watch?v=jRb4yOLAqn8"],
+			['video', "https://www.youtube.com/watch?v=jRb4yOLAqn8"],
 			['live', "https://chessboardnet.delilahsthings.ie"],
 		],
 	},
@@ -20,7 +20,7 @@ var portfolio_projects = [
 		source: "https://github.com/ljmc2000/Chessboard.net",
 		preview: "ChessboardPreview.png",
 		demos: [
-			['youtube', "https://youtu.be/MnvaOpltS2Y"],
+			['video', "https://youtu.be/MnvaOpltS2Y"],
 		],
 	},
 	{
@@ -30,7 +30,7 @@ var portfolio_projects = [
 		preview: "NoiseLooperPreview.png",
 		source: "https://github.com/ljmc2000/NoiseLooper",
 		demos: [
-			['youtube', "https://youtu.be/LIJsYYhpsC0"],
+			['video', "https://youtu.be/LIJsYYhpsC0"],
 			['fdroid', "https://f-droid.org/en/packages/ie.delilahsthings.soothingloop/"],
 		],
 	},
@@ -41,7 +41,7 @@ var portfolio_projects = [
 		preview: "NothesiaPreview.png",
 		source: "https://github.com/ljmc2000/nothesia",
 		demos: [
-			['youtube', "https://youtu.be/h44gcPVK7eA"],
+			['video', "https://youtu.be/h44gcPVK7eA"],
 		],
 	},
 	{
@@ -51,7 +51,7 @@ var portfolio_projects = [
 		preview: "VirtualConcertHallPreview.png",
 		source: "https://github.com/ljmc2000/VirtualConcertHall",
 		demos: [
-			['youtube', "https://www.youtube.com/watch?v=8XXBoIQZL4s"],
+			['video', "https://www.youtube.com/watch?v=8XXBoIQZL4s"],
 		],
 	},
 	{
@@ -61,7 +61,7 @@ var portfolio_projects = [
 		preview: "FishyChips.png",
 		source: "https://github.com/ljmc2000/fishy-chips",
 		demos: [
-			['youtube', "https://youtube.com/watch?v=jvCFFNhoMMQ"],
+			['video', "https://youtube.com/watch?v=jvCFFNhoMMQ"],
 			[ 'v1', "https://fishychipsv1.delilahsthings.ie"],
 			[ 'v2', "https://fishychipsv2.delilahsthings.ie"],
 		],
@@ -73,7 +73,7 @@ var portfolio_projects = [
 		preview: "ChristmasTreesPreview.png",
 		source: "https://github.com/ljmc2000/GameEngines1Assignment",
 		demos: [
-			['youtube', "https://www.youtube.com/watch?v=ltsh8RBHQcY"],
+			['video', "https://www.youtube.com/watch?v=ltsh8RBHQcY"],
 		],
 	},
 	{
@@ -83,7 +83,7 @@ var portfolio_projects = [
 		preview: "SolarSystemPreview.png",
 		source: "https://github.com/ljmc2000/solar-system",
 		demos: [
-			['youtube', "https://www.youtube.com/watch?v=0rkvRAaAAcE"],
+			['video', "https://www.youtube.com/watch?v=0rkvRAaAAcE"],
 		],
 	},
 ]
