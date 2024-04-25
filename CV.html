@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel=stylesheet href="style.css">
+	<script>
+		#include "configuration.h"
+		#include "constants.h"
+		#include "personal_information.h"
+		#include "portfolio.h"
+		#include "qualifications.h"
+		#include "skills.h"
+		#include "utils.js"
+	</script>
+</head>
+
+<script>
+</script>
+
+<body>
+<div class="page">
+	<div class="header">
+		<img class="pfp" src="assets/me2023.jpg">
+		<div class="selfinfo">
+			<div class="name-and-address">NAME</div><br>
+			<div id="email"><a href=mailto:EMAIL><img class="icon" src="assets/email-1572-svgrepo-com.svg">EMAIL</a></div>
+			<div id="github"><a href="https://github.com/ljmc2000"><img class="icon" src="assets/github.svg">github.com/ljmc2000</a></div>
+			<div id="linkedin"><a href=LINKEDIN_HTTPS><img class="icon" src="assets/iconmonstr-linkedin-3.svg">LINKEDIN</a></div>
+			<div id="cellphone"><img class="icon" src="assets/cell-phone-svgrepo-com.svg">CELLNUMBER</div>
+		</div>
+	</div>
+
+	<script>
+		var pfp = document.querySelector(".pfp")
+		set_image(pfp,"assets/me2023.jpg",120)
+	</script>
+
+	<div class="section-header">Experience</div>
+		<div class="job-outline"><b>Oct 2020 to Jun 2023</b>: Application Developer at Citi Bank</div>
+		<ul class="job-details">
+			<li>Translated some SQL scripts for a deprecated Sybase system to the new Apache Hadoop based system</li>
+			<li>Developed regression tests for a OneUI based web portal using Selenium framework</li>
+			<li>Onboarded new hires and introduce them to the project</li>
+			<li>Created educational resources for the project tech stack and the project itself</li>
+			<li>Partook in code reviews to ensure code quality and long term maintainability</li>
+			<li>Organized code reviews to ensure everybody remained on top of the branch, implement feature, merge cycle
+			<li>Developed some KNIME workflows and provided support to end users as part of the Citi KNIME team</li>
+		</ul>
+
+		<div class="job-outline"><b>Jan 2019 to Aug 2019</b>: Internship at Fidelity Investments</div>
+		<ul class="job-details">
+			<li>Worked as part of a team to develop a RESTful web application with components written in Angular.js and Spring</li>
+			<li>Created a dockerized version of the application</li>
+			<li>Designed dynamic components for said application so new checks could be created on the fly</li>
+			<li>Helped deploy, configure and maintain the UAT and Production HTTPS reverse proxies for same application</li>
+		</ul>
+
+		<div class="job-outline"><b>Jun 2018 to Sep 2018</b>: Tree Surgeon’s Assistant at Treecraft</div>
+		<div class="job-outline"><b>Oct 2013 to May 2014</b>: Retail assistant at Dunnes Stores</div>
+
+	<div class="section-header">Education and Certifications</div>
+	<div id="education">
+	</div>
+
+	<script>
+		var fig, img, cap
+
+		for(var qualification of qualifications)
+		{
+			fig = document.createElement("figure")
+			cap = document.createElement("figcaption")
+			img = document.createElement("img")
+
+			img.src=`assets/${qualification.preview}`
+			set_image(img,img.src,200)
+			cap.innerText = qualification.caption
+
+			fig.appendChild(img)
+			fig.appendChild(cap)
+			education.appendChild(fig)
+		}
+	</script>
+
+	<div class="section-header">Skills (
+		<button class="skill-l3">Average</button>
+		<button class="skill-l4">Confident</button>
+		<button class="skill-l5">Very Confident</button>
+	)</div>
+	<div class="section-subheader">Professional Experience</div>
+	<div id="prof_skills"></div>
+	<div class="section-subheader">Formally Trained</div>
+	<div id="form_skills"></div>
+	<div class="section-subheader">Self Taught</div>
+	<div id="self_skills"></div>
+
+	<script>
+		function render_skill(node, skill)
+		{
+			var button = document.createElement("button")
+			node.appendChild(button)
+			button.innerText=skill.name
+			button.classList.add(`skill-l${skill.level}`)
+		}
+
+		function show_skills(node,skills)
+		{
+			for(var skill of skills)
+			{
+				if(SHOW_ALL_SKILLS)
+				{
+					render_skill(node, skill)
+				}
+
+				else for(var category of skills_filter)
+				{
+						if(skill.categories.includes(category))
+						{
+							render_skill(node, skill)
+							break
+						}
+				}
+			}
+		}
+
+		show_skills(prof_skills,PROF_SKILLS)
+		show_skills(form_skills,FORM_SKILLS)
+		show_skills(self_skills,SELF_SKILLS)
+	</script>
+
+	<div class="new-page"></div>
+
+	<div class="section-header">Hobbies</div>
+	<ul>
+		<li>I play several musical instruments including the piano, harmonic, flute, tin whistle, recorder, pan-pipes and ocarina</li>
+		<li>I cycle and rollerblade around Dublin</li>
+		<li>My personal projects are available on my GitHub</li>
+		<li>I like write short stories following prompts as seen on <a href="https://reddit.com/r/writingprompts">r/writingprompts<a></li>
+		<li>Aspiring amateur artist using InkScape</li>
+	</ul>
+
+	<div class="section-header">Portfolio</div>
+	<div id="portfolio"></div>
+
+	<script>
+		var portfolio_row
+		for(var i in portfolio_projects)
+		{
+			if(i%2==0)
+			{
+				portfolio_row=document.createElement("div")
+				portfolio_row.classList.add("portfolio-row")
+				portfolio.appendChild(portfolio_row)
+			}
+
+			var portfolio_item=document.createElement("div")
+			portfolio_item.classList.add("portfolio-item")
+
+			var preview=document.createElement("img")
+			preview.src=`assets/${portfolio_projects[i].preview}`
+			set_image(preview,preview.src,180)
+			portfolio_item.appendChild(href(preview,portfolio_projects[i].demo))
+
+			var header=document.createElement("h3")
+			header.innerText=portfolio_projects[i].name
+			portfolio_item.appendChild(href(header,portfolio_projects[i].demo))
+
+			var source=document.createElement("a")
+			source.href=portfolio_projects[i].source
+			source.innerHTML=portfolio_projects[i].source.replace("ljmc2000\/","ljmc2000/<wbr>")
+			source.classList.add("hyperlink")
+			portfolio_item.appendChild(source)
+
+			if(portfolio_projects[i].live) {
+				for(var lnk of portfolio_projects[i].live)
+				{
+					var live_link=document.createElement("span")
+					live_link.innerHTML=` (<a>try it</a>)`
+					var a=live_link.querySelector("a")
+					a.href=lnk
+					a.classList.add("hyperlink")
+					a.classList.add("extra_visible")
+					portfolio_item.appendChild(live_link)
+				}
+			}
+
+			/*
+			var skills=document.createElement("div")
+			skills.innerText=portfolio_projects[i].skills
+			skills.classList.add("skills-shown")
+			portfolio_item.appendChild(skills)
+			*/
+
+			var description=document.createElement("div")
+			description.innerText=portfolio_projects[i].description
+			description.classList.add("project-description")
+			portfolio_item.appendChild(description)
+
+			portfolio_row.appendChild(portfolio_item)
+		}
+	</script>
+
+	<div id="references">References available upon request</div>
+</body>
+</html>
