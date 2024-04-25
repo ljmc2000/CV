@@ -4,20 +4,24 @@
 var portfolio_projects = [
 	{
 		name: "Chessboard2Net",
-		description: "A rewrite of Chessboard.Net in node and AngularJS with additional features such as custom colours on pieces, replays, spectating, all rules of chess working as expected and the entire additional game of checkers. This one is not intercompatible with the older one in any sense. The protocol is now websockets instead of TCP and the datastore is now PostgreSQL instead of MongoDB.",
+		description: "A rewrite of Chessboard.Net in node and AngularJS with additional features such as custom colours on pieces, replays, spectating, all rules of chess working as expected and the entire additional game of checkers. This one is not intercompatible with the older one due to protocol and database changes",
 		skills: "Node, AngularJS, PostgreSQL",
 		preview: "Chessboard2Net.png",
 		source: "https://github.com/ljmc2000/Chessboard2Net",
-		demo: "https://www.youtube.com/watch?v=jRb4yOLAqn8",
-		live: ["https://chessboardnet.delilahsthings.ie"],
+		demos: [
+			['youtube', "https://www.youtube.com/watch?v=jRb4yOLAqn8"],
+			['live', "https://chessboardnet.delilahsthings.ie"],
+		],
 	},
 	{
 		name: "Chessboard.net",
-		description: "A project for android programming in 3rd year. Utilizing Android Studio, OpenJDK, TCPIP, python flask, MongoDB, XML and InkScape, I made a simple application to allow 2 human opponents to play chess. The application enforced the rules (though en passant was never implemented), kept a tally of victories and losses and allowed extra chess sets to be unlocked upon winning a certain number of games.",
+		description: "A project for android programming in 3rd year. Utilizing Android Studio, OpenJDK, TCPIP, python flask, MongoDB, XML and InkScape, I made a simple application to allow 2 human opponents to play chess. The application kept a tally of victories and losses and allowed extra chess sets to be unlocked upon winning a certain number of games.",
 		skills: "Android, MongoDB",
 		source: "https://github.com/ljmc2000/Chessboard.net",
 		preview: "ChessboardPreview.png",
-		demo: "https://youtu.be/MnvaOpltS2Y"
+		demos: [
+			['youtube', "https://youtu.be/MnvaOpltS2Y"],
+		],
 	},
 	{
 		name: "Soothing Noise Player",
@@ -25,8 +29,10 @@ var portfolio_projects = [
 		skills: "Android, Java",
 		preview: "NoiseLooperPreview.png",
 		source: "https://github.com/ljmc2000/NoiseLooper",
-		demo: "https://youtu.be/LIJsYYhpsC0",
-		live: ["https://f-droid.org/en/packages/ie.delilahsthings.soothingloop/"]
+		demos: [
+			['youtube', "https://youtu.be/LIJsYYhpsC0"],
+			['fdroid', "https://f-droid.org/en/packages/ie.delilahsthings.soothingloop/"],
+		],
 	},
 	{
 		name: "Nothesia",
@@ -34,7 +40,9 @@ var portfolio_projects = [
 		skills: "Qt5, Midi",
 		preview: "NothesiaPreview.png",
 		source: "https://github.com/ljmc2000/nothesia",
-		demo: "https://youtu.be/h44gcPVK7eA"
+		demos: [
+			['youtube', "https://youtu.be/h44gcPVK7eA"],
+		],
 	},
 	{
 		name: "VirtualConcertHall",
@@ -42,7 +50,9 @@ var portfolio_projects = [
 		skills: "Qt5, Docker",
 		preview: "VirtualConcertHallPreview.png",
 		source: "https://github.com/ljmc2000/VirtualConcertHall",
-		demo: "https://www.youtube.com/watch?v=8XXBoIQZL4s"
+		demos: [
+			['youtube', "https://www.youtube.com/watch?v=8XXBoIQZL4s"],
+		],
 	},
 	{
 		name: "Fishy Chips V1 & V2",
@@ -50,8 +60,11 @@ var portfolio_projects = [
 		skills: "PHP, MySQL",
 		preview: "FishyChips.png",
 		source: "https://github.com/ljmc2000/fishy-chips",
-		demo: "https://youtube.com/watch?v=jvCFFNhoMMQ",
-		live: ["https://fishychipsv1.delilahsthings.ie","https://fishychipsv2.delilahsthings.ie"]
+		demos: [
+			['youtube', "https://youtube.com/watch?v=jvCFFNhoMMQ"],
+			[ 'v1', "https://fishychipsv1.delilahsthings.ie"],
+			[ 'v2', "https://fishychipsv2.delilahsthings.ie"],
+		],
 	},
 	{
 		name: "Oh Christmas-Tree",
@@ -59,7 +72,9 @@ var portfolio_projects = [
 		skills: "Unity, C#",
 		preview: "ChristmasTreesPreview.png",
 		source: "https://github.com/ljmc2000/GameEngines1Assignment",
-		demo: "https://www.youtube.com/watch?v=ltsh8RBHQcY"
+		demos: [
+			['youtube', "https://www.youtube.com/watch?v=ltsh8RBHQcY"],
+		],
 	},
 	{
 		name: "Solar System",
@@ -67,7 +82,9 @@ var portfolio_projects = [
 		skills: "Python, SVG",
 		preview: "SolarSystemPreview.png",
 		source: "https://github.com/ljmc2000/solar-system",
-		demo: "https://www.youtube.com/watch?v=0rkvRAaAAcE"
+		demos: [
+			['youtube', "https://www.youtube.com/watch?v=0rkvRAaAAcE"],
+		],
 	},
 ]
 

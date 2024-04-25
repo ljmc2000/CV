@@ -22,9 +22,9 @@
 		<img class="pfp" src="assets/me2023.jpg">
 		<div class="selfinfo">
 			<div class="name-and-address">NAME</div><br>
-			<div id="email"><a href=mailto:EMAIL><img class="icon" src="assets/email-1572-svgrepo-com.svg">EMAIL</a></div>
-			<div id="github"><a href="https://github.com/ljmc2000"><img class="icon" src="assets/github.svg">github.com/ljmc2000</a></div>
-			<div id="linkedin"><a href=LINKEDIN_HTTPS><img class="icon" src="assets/iconmonstr-linkedin-3.svg">LINKEDIN</a></div>
+			<div id="email"><a class="stealthlink" href=mailto:EMAIL><img class="icon" src="assets/email-1572-svgrepo-com.svg">EMAIL</a></div>
+			<div id="github"><a class="stealthlink" href="https://github.com/ljmc2000"><img class="icon" src="assets/github.svg">github.com/ljmc2000</a></div>
+			<div id="linkedin"><a class="stealthlink" href=LINKEDIN_HTTPS><img class="icon" src="assets/iconmonstr-linkedin-3.svg">LINKEDIN</a></div>
 			<div id="cellphone"><img class="icon" src="assets/cell-phone-svgrepo-com.svg">CELLNUMBER</div>
 		</div>
 	</div>
@@ -157,11 +157,11 @@
 			var preview=document.createElement("img")
 			preview.src=`assets/${portfolio_projects[i].preview}`
 			set_image(preview,preview.src,180)
-			portfolio_item.appendChild(href(preview,portfolio_projects[i].demo))
+			portfolio_item.appendChild(preview)
 
 			var header=document.createElement("h3")
 			header.innerText=portfolio_projects[i].name
-			portfolio_item.appendChild(href(header,portfolio_projects[i].demo))
+			portfolio_item.appendChild(header)
 
 			var source=document.createElement("a")
 			source.href=portfolio_projects[i].source
@@ -169,17 +169,21 @@
 			source.classList.add("hyperlink")
 			portfolio_item.appendChild(source)
 
-			if(portfolio_projects[i].live) {
-				for(var lnk of portfolio_projects[i].live)
-				{
-					var live_link=document.createElement("span")
-					live_link.innerHTML=` (<a>try it</a>)`
-					var a=live_link.querySelector("a")
-					a.href=lnk
-					a.classList.add("hyperlink")
-					a.classList.add("extra_visible")
-					portfolio_item.appendChild(live_link)
-				}
+			var live_link=document.createElement("span")
+			live_link.innerHTML=` (`
+			portfolio_item.appendChild(live_link)
+
+			var a, demos
+			var penultimate=portfolio_projects[i].demos.length-1
+			for(var j=0; j<portfolio_projects[i].demos.length; j++)
+			{
+				a=document.createElement("a")
+				demos=portfolio_projects[i].demos
+				a.innerText=demos[j][0]
+				a.href=demos[j][1]
+				a.classList.add("hyperlink")
+				a.classList.add("extra_visible")
+				live_link.innerHTML+=a.outerHTML+(j==penultimate?`)`:`|`)
 			}
 
 			/*
