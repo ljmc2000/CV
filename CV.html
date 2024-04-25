@@ -166,7 +166,6 @@
 			var source=document.createElement("a")
 			source.href=portfolio_projects[i].source
 			source.innerHTML=portfolio_projects[i].source.replace("ljmc2000\/","ljmc2000/<wbr>")
-			source.classList.add("hyperlink")
 			portfolio_item.appendChild(source)
 
 			var live_link=document.createElement("span")
@@ -181,7 +180,6 @@
 				demos=portfolio_projects[i].demos
 				a.innerText=demos[j][0]
 				a.href=demos[j][1]
-				a.classList.add("hyperlink")
 				a.classList.add("extra_visible")
 				live_link.innerHTML+=a.outerHTML+(j==penultimate?`)`:`|`)
 			}
