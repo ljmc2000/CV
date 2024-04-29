@@ -62,18 +62,20 @@ body {
 
 /*education*/
 #education {
-	display: flex;
+	font-size: 20px;
 }
-#education img {
-	height: 200px;
+
+#education .certificate{
+	font-weight: bold;
 }
-#education figure {
-	display: table;
+
+#education .institution{
+	font-style: italic;
 }
-#education figcaption {
-	display: table-caption;
-	caption-side: bottom;
-	text-align: center;
+
+#education .grade {
+	font-weight: bold;
+	text-decoration: underline;
 }
 
 /*skills*/
@@ -156,8 +158,8 @@ table.bordered-table tr {
 
 /*references*/
 #references {
-font-size: xx-large;
-font-weight: bold;
-text-align: center;
-margin: 40px;
+	font-size: xx-large;
+	font-weight: bold;
+	text-align: center;
+	margin: 40px;
 }

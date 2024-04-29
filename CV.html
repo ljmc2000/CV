@@ -62,21 +62,16 @@
 	</div>
 
 	<script>
-		var fig, img, cap
+		var div
 
-		for(var qualification of qualifications)
+		for(var q of qualifications)
 		{
-			fig = document.createElement("figure")
-			cap = document.createElement("figcaption")
-			img = document.createElement("img")
-
-			img.src=`assets/${qualification.preview}`
-			set_image(img,img.src,200)
-			cap.innerText = qualification.caption
-
-			fig.appendChild(img)
-			fig.appendChild(cap)
-			education.appendChild(fig)
+			div=document.createElement("div")
+			div.innerHTML='<span class="certificate"></span> <span class="grade"></span> from <span class="institution"></span>, <span class="date"></span>'
+			for(var k in q) {
+				div.querySelector(`.${k}`).innerText=q[k]
+			}
+			education.appendChild(div)
 		}
 	</script>
 
@@ -126,8 +121,6 @@
 		show_skills(self_skills,SELF_SKILLS)
 	</script>
 
-	<div class="new-page"></div>
-
 	<div class="section-header">Hobbies</div>
 	<ul>
 		<li>I play several musical instruments including the piano, harmonic, flute, tin whistle, recorder, pan-pipes and ocarina</li>
@@ -136,6 +129,8 @@
 		<li>I like write short stories following prompts as seen on <a href="https://reddit.com/r/writingprompts">r/writingprompts<a></li>
 		<li>Aspiring amateur artist using InkScape</li>
 	</ul>
+
+	<div class="new-page"></div>
 
 	<div class="section-header">Portfolio</div>
 	<div id="portfolio"></div>
