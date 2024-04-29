@@ -61,21 +61,17 @@ body {
 }
 
 /*education*/
-#education {
+.qualifications li {
 	font-size: 20px;
+	margin-bottom: 20px;
 }
 
-#education .certificate{
+.qualifications .certificate {
 	font-weight: bold;
 }
 
-#education .institution{
+.qualifications .institution {
 	font-style: italic;
-}
-
-#education .grade {
-	font-weight: bold;
-	text-decoration: underline;
 }
 
 /*skills*/
