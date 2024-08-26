@@ -1,5 +1,6 @@
 import yaml
 
+from decorations import li, skill
 from img_utils import image, svg
 
 with open('personal_details.yaml') as personal_details_src:
@@ -48,20 +49,31 @@ for company, details in experience.items():
 	if tech_stack:=details.get('tech_stack'):
 		outfile.write('<div>')
 		for tech in tech_stack:
-			outfile.write(f'<button class="skill_badge">{tech}</button>')
+			outfile.write(skill(tech))
 		outfile.write('</div>')
 
 	if duties:=details.get('duties'):
 		outfile.write('<ul class="job_details">')
 		for duty in duties:
-			outfile.write(f'<li>{duty}</li>')
+			outfile.write(li(duty))
 		outfile.write('</ul>')
 
 #Education
 outfile.write(f'''<div class="section_header">Education and Certifications</div>
-	<div> <b>Bachelor of Science in Computer Science (Infrastructure)</b> | First Class Honors | <i>Technological University of Dublin</i> | Sep 2016 - Jun 2020 </div>
-	<div> <b>Leaving Certificate</b> | 410 points | <i>St. Josephs CBS</i> | Sep 2010 - Jun 2016 </div>
-	<div> <b>KNIME L3 Certificate</b> | April 2021 </div>
+	<div>
+		<b>Bachelor of Science</b> in <b>Computer Science (Infrastructure)</b> from <i>TU Dublin</i> | Sep 2016 - Jun 2020 <br>
+		<span class="grade_indicator">First Class Honors</span>
+		{" ".join([skill(s) for s in ('Algorithms', 'Android Development', 'Basic Pen Testing', 'C', 'Cloud Computing', 'Database Admin', 'Databases', 'Docker', 'Java', 'Linux OS', 'Microsoft Azure', 'MongoDB', 'Maths', 'Networking', 'PHP', 'Program Design', 'Python', 'Python Flask', 'TCP Sockets', 'UDP Sockets', 'UI design', 'Unity Engine', 'Virtual Machines', 'Web Development')])}
+	</div>
+	<div>
+		<b>Leaving Certificate</b> from <i>St. Josephs CBS</i> | Sep 2010 - Jun 2016 <br>
+		<span class="grade_indicator">410 points</span>
+		{" ".join([skill(s) for s in ('English', 'Irish', 'Mathmatics', 'History', 'Music', 'Chemistry', 'Spanish')])}
+	</div>
+	<div>
+		<b>KNIME L3 Certificate</b> | April 2021 <br>
+		{skill("KNIME")}
+	</div>
 ''')
 
 #end
