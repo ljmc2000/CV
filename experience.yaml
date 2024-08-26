@@ -1,0 +1,48 @@
+Citi Bank:
+  title: Application Developer
+  start_date: Oct 2020
+  end_date: Jun 2023
+  duties:
+  - Translated some business infrastructure sybase SQL scripts to apache hadoop as part of sybase retirement project
+  - Developed regression tests for an internal tool using the Selenium framework and Cucumber
+  - Onboarded new hires and introduce them to the project
+  - Created educational resources for Selenium and some other libraries used by the project such as picocontainer
+  - Organized code reviews to maintain and elevate code quality
+  - Developed some KNIME workflows and provided support to end users as part of the Citi KNIME team
+  tech_stack:
+  - Java
+  - Selenium
+  - Javascript
+  - Cucumber
+  - Sybase
+  - Hadoop
+  - KNIME
+
+Fidelity Investments:
+  title: Intern
+  start_date: Jan 2019
+  end_date: Aug 2019
+  duties:
+  - Worked as part of a team to maintain and improve an internal tool written in Spring and Angular.js
+  - Created a dockerized version of the application
+  - Designed dynamic components for said application to streamline integrating new processes into the application
+  - Helped deploy, configure, document and maintain the UAT and Production Apache servers
+  tech_stack:
+  - Java
+  - Javascript
+  - MySQL
+  - Angular.js
+  - Spring
+  - Apache
+  - RHEL
+  - Docker
+
+Treecraft:
+  title: Tree Surgeon’s Assistant
+  start_date: Jun 2018
+  end_date: Sep 2018
+
+Dunnes Stores:
+  title: Retail Assistant
+  start_date: Oct 2013
+  end_date: May 2014
