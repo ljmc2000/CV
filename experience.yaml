@@ -17,6 +17,8 @@ Citi Bank:
   - Sybase
   - Hadoop
   - KNIME
+  - Bitbucket
+  - Jira
 
 Fidelity Investments:
   title: Intern
@@ -36,6 +38,8 @@ Fidelity Investments:
   - Apache
   - RHEL
   - Docker
+  - Bitbucket
+  - Jira
 
 Treecraft:
   title: Tree Surgeon’s Assistant
