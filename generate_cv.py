@@ -3,11 +3,14 @@ import yaml
 from decorations import li, skill
 from img_utils import image, svg
 
-with open('personal_details.yaml') as personal_details_src:
-	personal_details=yaml.safe_load(personal_details_src)
-
 with open('experience.yaml') as experience_src:
 	experience=yaml.safe_load(experience_src)
+
+with open('misc_skills.yaml') as misc_skills_src:
+	misc_skills=yaml.safe_load(misc_skills_src)
+
+with open('personal_details.yaml') as personal_details_src:
+	personal_details=yaml.safe_load(personal_details_src)
 
 with open('portfolio.yaml') as portfolio_src:
 	portfolio=yaml.safe_load(portfolio_src)
@@ -79,6 +82,11 @@ outfile.write(f'''<div class="section_header">Education and Certifications</div>
 	</div>
 ''')
 
+#Skills
+outfile.write('<div class="section_header">Other Skills</div>')
+for s in misc_skills:
+	outfile.write(skill(s))
+
 #Hobbies
 outfile.write('''<div class="section_header">Hobbies</div>
 <ul>
@@ -86,7 +94,7 @@ outfile.write('''<div class="section_header">Hobbies</div>
 	<li>I cycle and rollerblade around Dublin</li>
 	<li>My personal projects are available on my GitHub</li>
 	<li>I like write short stories following prompts as seen on <a href="https://reddit.com/r/writingprompts">r/writingprompts<a></li>
-	<li>Aspiring amateur artist using InkScape</li>
+	<li>Aspiring amateur artist using InkScape and Sometimes Krita</li>
 </ul>
 ''')
 
