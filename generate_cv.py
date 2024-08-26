@@ -79,6 +79,17 @@ outfile.write(f'''<div class="section_header">Education and Certifications</div>
 	</div>
 ''')
 
+#Hobbies
+outfile.write('''<div class="section_header">Hobbies</div>
+<ul>
+	<li>I play several musical instruments including the piano, harmonic, flute, tin whistle, recorder, pan-pipes and ocarina</li>
+	<li>I cycle and rollerblade around Dublin</li>
+	<li>My personal projects are available on my GitHub</li>
+	<li>I like write short stories following prompts as seen on <a href="https://reddit.com/r/writingprompts">r/writingprompts<a></li>
+	<li>Aspiring amateur artist using InkScape</li>
+</ul>
+''')
+
 #new page
 outfile.write('<div class="new-page"></div>')
 
