@@ -64,6 +64,13 @@ body {
 	padding-top: 10px;
 }
 
+.references {
+	font-size: xx-large;
+	font-weight: bold;
+	text-align: center;
+	margin: 40px;
+}
+
 .section_header {
 	color: darkmagenta;
 	font-size: 32px;

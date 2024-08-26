@@ -103,5 +103,7 @@ for name, details in portfolio.items():
 
 	i+=1
 
+outfile.write('<div class="references">References available upon request</div>')
+
 #end
 outfile.write('</body></html>')
