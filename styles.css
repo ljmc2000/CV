@@ -16,14 +16,52 @@ body {
 	text-decoration: inherit; /* no underline */
 }
 
-.job-details {
+.job_details {
 	margin-top: 1px;
 	margin-bottom: 7px;
 	padding-left: 28px;
 }
 
-.job-outline {
+.job_outline {
 	font-size: 25px;
+}
+
+@media print {
+	.new-page {
+		page-break-before: always;
+	}
+}
+
+.portfolio_item {
+	width: 45%;
+	padding-right: 2.5%;
+}
+
+.portfolio_item h3 {
+	margin-bottom: -2px;
+	margin-top: 2px;
+}
+
+.portfolio_item img {
+	object-fit: cover;
+	object-position: bottom;
+	padding-top: 4px;
+	padding-right: 4px;
+	float: left;
+}
+
+.portfolio_item .skills_shown {
+	margin-right: 10px;
+}
+
+.portfolio_row {
+	width: 100%;
+	display: inline-flex;
+	padding-bottom: 20px;
+}
+
+.project_description {
+	padding-top: 10px;
 }
 
 .section_header {
@@ -41,13 +79,12 @@ body {
 	margin-left: 1px;
 }
 
-@media print {
-	.new-page {
-		margin-top: 30px;
-		page-break-before: always;
-	}
-}
-
 ul {
 	padding-left: 12px;
+}
+
+.ultravisible_link {
+	color: red;
+	font-weight: bolder;
+	text-decoration: none;
 }

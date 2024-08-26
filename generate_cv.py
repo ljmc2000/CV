@@ -9,6 +9,9 @@ with open('personal_details.yaml') as personal_details_src:
 with open('experience.yaml') as experience_src:
 	experience=yaml.safe_load(experience_src)
 
+with open('portfolio.yaml') as portfolio_src:
+	portfolio=yaml.safe_load(portfolio_src)
+
 outfile=open("LiamMcCormick_CV.html", "w+")
 outfile.write('<html>')
 
@@ -75,6 +78,30 @@ outfile.write(f'''<div class="section_header">Education and Certifications</div>
 		{skill("KNIME")}
 	</div>
 ''')
+
+#new page
+outfile.write('<div class="new-page"></div>')
+
+#Portfolio
+outfile.write(f'<div class="section_header">Portfolio</div>')
+i=0
+for name, details in portfolio.items():
+	if i%2==0:
+		outfile.write('<div class="portfolio_row">')
+
+	outfile.write(f'''<div class="portfolio_item">
+		{image(details["preview"], 180, 180)}
+		<h3>{name}</h3>
+		<a href="{details['source']}">{details['source'].replace('ljmc2000/',"ljmc2000/<wbr>")}</a>
+		{"/".join([f'<a class="ultravisible_link" href="{link}">{label}</a>' for (label, link) in details["demos"].items()])}<br>
+		{" ".join([skill(s) for s in details["skills"]])}
+		<div class="project_description">{details["description"]}</div>
+	</div>''')
+
+	if i%2==1:
+		outfile.write('</div>')
+
+	i+=1
 
 #end
 outfile.write('</body></html>')
