@@ -2,8 +2,8 @@ import yaml
 
 from img_utils import image, svg
 
-with open('personal_information.yaml') as personal_information:
-	personal_details=yaml.safe_load(personal_information)
+with open('personal_details.yaml') as personal_details_src:
+	personal_details=yaml.safe_load(personal_details_src)
 
 outfile=open("LiamMcCormick_CV.html", "w+")
 outfile.write('<html>')
