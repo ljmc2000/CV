@@ -21,6 +21,6 @@ def image(filename: str, height: int, width: int=None, *, scale: int=1, class_na
 	imgmck=subprocess.run(['magick', asset(filename), '-resize', f'{scale*BASE_SCALE*width}x{scale*BASE_SCALE*height}', 'JPG:-'], stdout=subprocess.PIPE)
 	return f'''<img {class_names}{style} width="{width}" height="{height}" src="data: image/jpeg; base64, {base64.b64encode(imgmck.stdout).decode()}">'''
 
-def svg(filename: str):
-	with open(asset(filename)) as ext_file:
-		return ext_file.read()
+def svg(filename: str, height: int) -> str:
+	with open(asset(filename), 'rb') as f:
+		return f'<img height="{height}" src="data: image/svg+xml; base64, {base64.b64encode(f.read()).decode()}">'
