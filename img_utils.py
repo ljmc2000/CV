@@ -1,6 +1,6 @@
 import base64, subprocess
 
-BASE_SCALE=2
+BASE_SCALE=1.75
 
 def asset(filename):
 	return 'assets/'+filename
