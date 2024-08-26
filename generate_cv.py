@@ -45,6 +45,12 @@ for company, details in experience.items():
 		<b>{details["start_date"]} to {details["end_date"]}:</b> {details["title"]} at {company}
 	</div>''')
 
+	if tech_stack:=details.get('tech_stack'):
+		outfile.write('<div>')
+		for tech in tech_stack:
+			outfile.write(f'<button class="skill_badge">{tech}</button>')
+		outfile.write('</div>')
+
 	if duties:=details.get('duties'):
 		outfile.write('<ul class="job_details">')
 		for duty in duties:

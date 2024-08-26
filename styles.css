@@ -30,6 +30,13 @@ body {
 	padding-bottom: 3px;
 }
 
+.skill_badge {
+	padding: 0px;
+	background-color: lightgray;
+	border: 1px solid black;
+	margin-left: 1px;
+}
+
 @media print {
 	.new-page {
 		margin-top: 30px;
