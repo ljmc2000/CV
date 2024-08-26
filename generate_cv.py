@@ -105,7 +105,7 @@ for name, details in portfolio.items():
 		<h3>{name}</h3>
 		<a href="{details['source']}">{details['source'].replace('ljmc2000/',"ljmc2000/<wbr>")}</a>
 		{"/".join([f'<a class="ultravisible_link" href="{link}">{label}</a>' for (label, link) in details["demos"].items()])}<br>
-		{" ".join([skill(s) for s in details["skills"]])}
+		{"".join([skill(s) for s in details["skills"]])}
 		<div class="project_description">{details["description"]}</div>
 	</div>''')
 

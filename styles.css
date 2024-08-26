@@ -19,7 +19,6 @@ body {
 .job_details {
 	margin-top: 1px;
 	margin-bottom: 7px;
-	padding-left: 28px;
 }
 
 .job_outline {
@@ -83,7 +82,7 @@ body {
 	padding: 1px;
 	background-color: lightgray;
 	border: 1px solid black;
-	margin-left: 1px;
+	margin: 0.5px;
 }
 
 ul {
