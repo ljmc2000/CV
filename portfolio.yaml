@@ -3,6 +3,9 @@ Chessboard2Net:
   skills:
   - node.js
   - AngularJS
+  - HTML
+  - CSS
+  - TypeScript
   - PostgreSQL
   - InkScape
   preview: Chessboard2Net.png
@@ -15,8 +18,11 @@ Chessboard.net:
   description: A project for android programming in 3rd year. Utilizing Android Studio, OpenJDK, TCPIP, python flask, MongoDB, XML and InkScape, I made a simple application to allow 2 human opponents to play chess. The application kept a tally of victories and losses and allowed extra chess sets to be unlocked upon winning a certain number of games.
   skills:
   - Android
+  - Java
+  - Python Flask
   - MongoDB
   - InkScape
+  - UDP
   source: https://github.com/ljmc2000/Chessboard.net
   preview: ChessboardPreview.png
   demos:
@@ -38,6 +44,7 @@ Nothesia:
   description: Visualize MIDI data using the QT5 framework. Pressed keys turn a shade of gray, and while held emit coloured rectangles.
   skills:
   - Qt5
+  - C++
   - Midi
   - OpenGL
   preview: NothesiaPreview.png
@@ -49,7 +56,10 @@ VirtualConcertHall:
   description: My collage final year project. Utilizing the power of Microsoft Azure, the QT5 framework, python flask, MIDI, MongoDB, and Docker containers, this project allows musicians with MIDI compatible instruments to jam together across distinct geolocations.
   skills:
   - Qt5
+  - C++
   - Docker
+  - Python Flask
+  - Microsoft Azure
   preview: VirtualConcertHallPreview.png
   source: https://github.com/ljmc2000/VirtualConcertHall
   demos:
@@ -59,6 +69,7 @@ Fishy Chips V1 & V2:
   description: My first interactive website, developed in 2nd year for a collage module, for the fictional restaraunt "Fishy Chips". Utilizing HTML, PHP and MySQL, it allowed a user to order food, cancel an unfulfilled order or browse past orders. It was later rewritten in Python+CGI while maintaining database compatibility such that a v1 and v2 instance could share a database.
   skills:
   - PHP
+  - HTML
   - MySQL
   - Python
   - CGI
