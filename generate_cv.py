@@ -57,5 +57,12 @@ for company, details in experience.items():
 			outfile.write(f'<li>{duty}</li>')
 		outfile.write('</ul>')
 
+#Education
+outfile.write(f'''<div class="section_header">Education and Certifications</div>
+	<div> <b>Bachelor of Science in Computer Science (Infrastructure)</b> | First Class Honors | <i>Technological University of Dublin</i> | Sep 2016 - Jun 2020 </div>
+	<div> <b>Leaving Certificate</b> | 410 points | <i>St. Josephs CBS</i> | Sep 2010 - Jun 2016 </div>
+	<div> <b>KNIME L3 Certificate</b> | April 2021 </div>
+''')
+
 #end
 outfile.write('</body></html>')
