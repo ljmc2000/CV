@@ -1,5 +1,7 @@
 import base64, subprocess
 
+BASE_SCALE=2
+
 def asset(filename):
 	return 'assets/'+filename
 
@@ -16,7 +18,7 @@ def image(filename: str, height: int, width: int=None, *, scale: int=1, class_na
 	class_names=f'class="{class_names}" ' if class_names else ""
 	style=f'style="{style}" ' if style else ""
 
-	imgmck=subprocess.run(['magick', asset(filename), '-resize', f'{scale*width}x{scale*height}', 'JPG:-'], stdout=subprocess.PIPE)
+	imgmck=subprocess.run(['magick', asset(filename), '-resize', f'{scale*BASE_SCALE*width}x{scale*BASE_SCALE*height}', 'JPG:-'], stdout=subprocess.PIPE)
 	return f'''<img {class_names}{style} width="{width}" height="{height}" src="data: image/jpeg; base64, {base64.b64encode(imgmck.stdout).decode()}">'''
 
 def svg(filename: str):

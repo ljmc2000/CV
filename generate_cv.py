@@ -32,8 +32,8 @@ for link, label, icon in [
 	('https://github.com/ljmc2000', 'github.com/ljmc2000', 'github.svg'),
 	(personal_details['linkedin_final'], personal_details['linkedin'], 'iconmonstr-linkedin-3.svg'),
 	]:
-	outfile.write(f'''<div><a href={link}>{image(icon,16,scale=2)} {label}</a></div>''')
-outfile.write(f'''<div>{image('cell-phone-svgrepo-com.svg',16,scale=2)} {personal_details["cellnumber"]}</div>''')
+	outfile.write(f'''<div><a href={link}>{image(icon,16)} {label}</a></div>''')
+outfile.write(f'''<div>{image('cell-phone-svgrepo-com.svg',16)} {personal_details["cellnumber"]}</div>''')
 
 outfile.write('</div></div>')
 
