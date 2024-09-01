@@ -1,7 +1,7 @@
 import yaml
 
-from decorations import li, skill
-from img_utils import image, svg
+from decorations import li
+from img_utils import image, skill, svg
 
 with open('experience.yaml') as experience_src:
 	experience=yaml.safe_load(experience_src)

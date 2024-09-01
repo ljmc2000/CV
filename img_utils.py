@@ -21,6 +21,14 @@ def image(filename: str, height: int, width: int=None, *, scale: int=1, class_na
 	imgmck=subprocess.run(['magick', asset(filename), '-resize', f'{scale*BASE_SCALE*width}x{scale*BASE_SCALE*height}', 'JPG:-'], stdout=subprocess.PIPE)
 	return f'''<img {class_names}{style} width="{width}" height="{height}" src="data: image/jpeg; base64, {base64.b64encode(imgmck.stdout).decode()}">'''
 
+def skill(skill_name: str) -> str:
+	try:
+		with open(f'skill_icons/{skill_name}.svg', 'rb') as skill_icon_src:
+			return f'<button class="skill_badge"><img class="skill_badge_img" src="data: image/svg+xml; base64, {base64.b64encode(skill_icon_src.read()).decode()}"></button>'
+
+	except FileNotFoundError:
+		return f'<button class="skill_badge"><img><span class="skill_badge_txt">{skill_name}</span></button>'
+
 def svg(filename: str, height: int) -> str:
 	with open(asset(filename), 'rb') as f:
 		return f'<img height="{height}" src="data: image/svg+xml; base64, {base64.b64encode(f.read()).decode()}">'
