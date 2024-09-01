@@ -1,5 +1,6 @@
 # Dependencies
-Requires python and imagemagick
+- Requires python
+- Requires imagemagick and file to generate a CV with compressed images
 
 # HTML
 run generate_cv.py to build HTML version of CV
