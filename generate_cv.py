@@ -9,6 +9,9 @@ with open('education.yaml') as education_src:
 with open('experience.yaml') as experience_src:
 	experience=yaml.safe_load(experience_src)
 
+with open('hobbies.yaml') as hobbies_src:
+	hobbies=yaml.safe_load(hobbies_src)
+
 with open('misc_skills.yaml') as misc_skills_src:
 	misc_skills=yaml.safe_load(misc_skills_src)
 
@@ -85,15 +88,10 @@ for s in misc_skills:
 	outfile.write(skill(s))
 
 #Hobbies
-outfile.write('''<div class="section_header">Hobbies</div>
-<ul>
-	<li>I play several musical instruments including the piano, harmonic, flute, tin whistle, recorder, pan-pipes and ocarina</li>
-	<li>I cycle and rollerblade around Dublin</li>
-	<li>My personal projects are available on my GitHub</li>
-	<li>I like write short stories following prompts as seen on <a href="https://reddit.com/r/writingprompts">r/writingprompts<a></li>
-	<li>Aspiring amateur artist using InkScape and Sometimes Krita</li>
-</ul>
-''')
+outfile.write('<div class="section_header">Hobbies</div><ul>')
+for hobby in hobbies:
+	outfile.write(f'<li>{hobby}</li>')
+outfile.write('</ul>')
 
 #new page
 outfile.write('<div class="new-page"></div>')
