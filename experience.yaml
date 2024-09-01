@@ -25,7 +25,7 @@ Fidelity Investments:
   start_date: Jan 2019
   end_date: Aug 2019
   duties:
-  - Worked as part of a team to maintain and improve an internal tool written in Spring and Angular.js
+  - Worked as part of a team to maintain and improve an internal tool written in Spring and AngularJS
   - Created a dockerized version of the application
   - Designed dynamic components for said application to streamline integrating new processes into the application
   - Helped deploy, configure, document and maintain the UAT and Production Apache servers
@@ -33,7 +33,7 @@ Fidelity Investments:
   - Java
   - Javascript
   - MySQL
-  - Angular.js
+  - AngularJS
   - Spring
   - Apache
   - RHEL
