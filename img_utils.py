@@ -25,13 +25,13 @@ if COMPRESS_IMAGES:
 		return f'''<img {class_names}{style} width="{width}" height="{height}" src="data: image/jpeg; base64, {base64.b64encode(imgmck.stdout).decode()}">'''
 
 	def skill(skill_name: str) -> str:
-		imgmck=subprocess.run(['magick', '-background', 'transparent', f'skill_icons/{skill_name}.svg', '-geometry', f'x{12*BASE_SCALE}', 'WEBP:-'], stdout=subprocess.PIPE)
+		imgmck=subprocess.run(['magick', '-background', 'transparent', f'skill_icons/{skill_name}.svg', '-geometry', f'x{16*BASE_SCALE}', 'WEBP:-'], stdout=subprocess.PIPE)
 
 		if imgmck.returncode==0:
-			return f'<button class="skill_badge"><img class="skill_badge_img" src="data: image/png; base64, {base64.b64encode(imgmck.stdout).decode()}"></button>'
+			return f'<button class="skill_badge skill_badge_img"><img src="data: image/png; base64, {base64.b64encode(imgmck.stdout).decode()}"></button>'
 
 		else:
-			return f'<button class="skill_badge"><img><span class="skill_badge_txt">{skill_name}</span></button>'
+			return f'<button class="skill_badge skill_badge_txt"><img><span>{skill_name}</span></button>'
 
 else:
 	def image(filename: str, height: int, width: int=None, *, scale: int=1, class_names='', style='') -> str:
@@ -46,7 +46,7 @@ else:
 	def skill(skill_name: str) -> str:
 		try:
 			with open(f'skill_icons/{skill_name}.svg', 'rb') as skill_icon_src:
-				return f'<button class="skill_badge"><img class="skill_badge_img" src="data: image/svg+xml; base64, {base64.b64encode(skill_icon_src.read()).decode()}"></button>'
+				return f'<button class="skill_badge skill_badge_img"><img src="data: image/svg+xml; base64, {base64.b64encode(skill_icon_src.read()).decode()}"></button>'
 
 		except FileNotFoundError:
-			return f'<button class="skill_badge"><img><span class="skill_badge_txt">{skill_name}</span></button>'
+			return f'<button class="skill_badge skill_badge_txt"><img><span>{skill_name}</span></button>'

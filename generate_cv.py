@@ -67,13 +67,11 @@ for company, details in experience.items():
 #Education
 outfile.write(f'''<div class="section_header">Education and Certifications</div>
 	<div>
-		<b>Bachelor of Science</b> in <b>Computer Science (Infrastructure)</b> from <i>TU Dublin</i> | Sep 2016 - Jun 2020 <br>
-		<span class="grade_indicator">First Class Honors</span>
+		<b>Bachelor of Science</b> in <b>Computer Science (Infrastructure)</b> from <i>TU Dublin</i> <span class="grade_indicator">First Class Honors</span> | Sep 2016 - Jun 2020 <br>
 		{" ".join([skill(s) for s in ('Algorithms', 'Android', 'Basic Pen Testing', 'C', 'Cloud Computing', 'CSS', 'Database Admin', 'Docker', 'HTML', 'Java', 'Linux', 'Microsoft Azure', 'MongoDB', 'Maths', 'Networking', 'OracleDB', 'PHP', 'Program Design', 'Python', 'Python Flask', 'TCP', 'UDP', 'UI design', 'Unity GameEngine', 'Virtualbox')])}
 	</div>
 	<div>
-		<b>Leaving Certificate</b> from <i>St. Josephs CBS</i> | Sep 2010 - Jun 2016 <br>
-		<span class="grade_indicator">410 points</span>
+		<b>Leaving Certificate</b> from <i>St. Josephs CBS</i> <span class="grade_indicator">410 points</span> | Sep 2010 - Jun 2016 <br>
 		{" ".join([skill(s) for s in ('English', 'Irish', 'Mathmatics', 'History', 'Music', 'Chemistry', 'Spanish')])}
 	</div>
 	<div>

@@ -80,20 +80,26 @@ body {
 }
 
 .skill_badge {
-	padding: 0px;
-	border: 1px solid black;
-	background-color: lightgray;
 	vertical-align: middle;
-	height: 14px;
-	margin: 0.5px;
+	height: 18px;
+	margin: .5px;
 }
 
 .skill_badge_img {
-	height: 12px;
+	padding: 0px;
+	border: 0px solid black;
+	background-color: white;
+	margin-left: 3px;
+	margin-right: 3px;
+}
+
+.skill_badge_img > img {
+	height: 16px;
 }
 
 .skill_badge_txt {
-	padding: 1px;
+	border: 1px solid black;
+	background-color: lightgray;
 }
 
 ul {
