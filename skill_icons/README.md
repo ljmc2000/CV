@@ -1,0 +1,1 @@
+Images in this folder were pulled from wikipedia, svgrepo, freeiconshop.com, logosdownload.com and other sites indexed by google images. Some feature minor edits. If you object to my usage of your logo in my CV please file an issue in the repository and I will be happy to remove it or replace it with one you believe better represents your brand.
