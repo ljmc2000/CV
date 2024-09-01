@@ -69,7 +69,7 @@ outfile.write(f'''<div class="section_header">Education and Certifications</div>
 	<div>
 		<b>Bachelor of Science</b> in <b>Computer Science (Infrastructure)</b> from <i>TU Dublin</i> | Sep 2016 - Jun 2020 <br>
 		<span class="grade_indicator">First Class Honors</span>
-		{" ".join([skill(s) for s in ('Algorithms', 'Android Development', 'Basic Pen Testing', 'C', 'Cloud Computing', 'Database Admin', 'Databases', 'Docker', 'Java', 'Linux OS', 'Microsoft Azure', 'MongoDB', 'Maths', 'Networking', 'PHP', 'Program Design', 'Python', 'Python Flask', 'TCP Sockets', 'UDP Sockets', 'UI design', 'Unity Engine', 'Virtual Machines', 'Web Development')])}
+		{" ".join([skill(s) for s in ('Algorithms', 'Android', 'Basic Pen Testing', 'C', 'Cloud Computing', 'CSS', 'Database Admin', 'Docker', 'HTML', 'Java', 'Linux', 'Microsoft Azure', 'MongoDB', 'Maths', 'Networking', 'OracleDB', 'PHP', 'Program Design', 'Python', 'Python Flask', 'TCP', 'UDP', 'UI design', 'Unity GameEngine', 'Virtualbox')])}
 	</div>
 	<div>
 		<b>Leaving Certificate</b> from <i>St. Josephs CBS</i> | Sep 2010 - Jun 2016 <br>
