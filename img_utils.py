@@ -1,7 +1,7 @@
 import base64, subprocess
 from os import environ
 
-BASE_SCALE=1.75
+BASE_SCALE=environ.get('BASE_SCALE', 1.75)
 COMPRESS_IMAGES=True if environ.get('COMPRESS_IMAGES', 0) else False
 
 def asset(filename):
