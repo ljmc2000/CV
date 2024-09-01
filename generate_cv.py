@@ -3,6 +3,9 @@ import yaml
 from decorations import li
 from img_utils import image, skill
 
+with open('education.yaml') as education_src:
+	education=yaml.safe_load(education_src)
+
 with open('experience.yaml') as experience_src:
 	experience=yaml.safe_load(experience_src)
 
@@ -49,7 +52,9 @@ outfile.write('<div class="section_header">Experience</div>')
 for company, details in experience.items():
 	outfile.write(f'''
 	<div class="job_outline">
-		<b>{details["start_date"]} to {details["end_date"]}:</b> {details["title"]} at {company}
+		<mark>
+			<b>{details["start_date"]} to {details["end_date"]}:</b> {details["title"]} at {company}
+		</mark>
 	</div>''')
 
 	if tech_stack:=details.get('tech_stack'):
@@ -65,20 +70,14 @@ for company, details in experience.items():
 		outfile.write('</ul>')
 
 #Education
-outfile.write(f'''<div class="section_header">Education and Certifications</div>
-	<div>
-		<b>Bachelor of Science</b> in <b>Computer Science (Infrastructure)</b> from <i>TU Dublin</i> <span class="grade_indicator">First Class Honors</span> | Sep 2016 - Jun 2020 <br>
-		{" ".join([skill(s) for s in ('Algorithms', 'Android', 'Basic Pen Testing', 'C', 'Cloud Computing', 'CSS', 'Database Admin', 'Docker', 'HTML', 'Java', 'Linux', 'Microsoft Azure', 'MongoDB', 'Maths', 'Networking', 'OracleDB', 'PHP', 'Program Design', 'Python', 'Python Flask', 'TCP', 'UDP', 'UI design', 'Unity GameEngine', 'Virtualbox')])}
-	</div>
-	<div>
-		<b>Leaving Certificate</b> from <i>St. Josephs CBS</i> <span class="grade_indicator">410 points</span> | Sep 2010 - Jun 2016 <br>
-		{" ".join([skill(s) for s in ('English', 'Irish', 'Mathmatics', 'History', 'Music', 'Chemistry', 'Spanish')])}
-	</div>
-	<div>
-		<b>KNIME L3 Certificate</b> | April 2021 <br>
-		{skill("KNIME")}
-	</div>
-''')
+outfile.write(f'''<div class="section_header">Education and Certifications</div>''')
+for certification in education:
+	outfile.write(f'''
+		<div class="education_item">
+			<div class="education_item_header"><mark>{certification['html']}</mark></div>
+			{" ".join([skill(s) for s in certification['skills']])}
+		</div>
+	''')
 
 #Skills
 outfile.write('<div class="section_header">Other Skills</div>')

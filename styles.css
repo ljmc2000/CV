@@ -8,6 +8,15 @@ body {
 	font-size: 12px;
 }
 
+.education_item {
+	margin-bottom: 12px;
+}
+
+.education_item_header {
+	font-size: 18px;
+	margin-bottom: 6px;
+}
+
 .grade_indicator {
 	color: purple;
 }
@@ -24,6 +33,10 @@ body {
 
 .job_outline {
 	font-size: 25px;
+}
+
+mark {
+	background-color: antiquewhite;
 }
 
 @media print {

@@ -1,0 +1,41 @@
+- html: <b>Bachelor of Science</b> in <b>Computer Science (Infrastructure)</b> from <i>TU Dublin</i> <span class="grade_indicator">First Class Honors</span> | Sep 2016 - Jun 2020
+  skills:
+  - Algorithms
+  - Android
+  - Basic Pen Testing
+  - C
+  - Cloud Computing
+  - CSS
+  - Database Admin
+  - Docker
+  - HTML
+  - Java
+  - Linux
+  - Microsoft Azure
+  - MongoDB
+  - Maths
+  - Networking
+  - OracleDB
+  - PHP
+  - Program Design
+  - Python
+  - Python Flask
+  - TCP
+  - UDP
+  - UI design
+  - Unity GameEngine
+  - Virtualbox
+
+- html: <b>Leaving Certificate</b> from <i>St. Josephs CBS</i> <span class="grade_indicator">410 points</span> | Sep 2010 - Jun 2016 <br>
+  skills:
+  - English
+  - Irish
+  - Mathmatics
+  - History
+  - Music
+  - Chemistry
+  - Spanish
+
+- html: <b>KNIME L3 Certificate</b> | April 2021 <br>
+  skills:
+  - KNIME
