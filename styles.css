@@ -42,7 +42,7 @@ body {
 	margin-top: 2px;
 }
 
-.portfolio_item img {
+.portfolio_item_preview {
 	object-fit: cover;
 	object-position: bottom;
 	padding-top: 4px;

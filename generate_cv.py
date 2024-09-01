@@ -109,7 +109,7 @@ for name, details in portfolio.items():
 		outfile.write('<div class="portfolio_row">')
 
 	outfile.write(f'''<div class="portfolio_item">
-		{image(details["preview"], 180, 180)}
+		{image(details["preview"], 180, 180, class_names="portfolio_item_preview")}
 		<h3>{name}</h3>
 		<a href="{details['source']}">{details['source'].replace('ljmc2000/',"ljmc2000/<wbr>")}</a>
 		{"/".join([f'<a class="ultravisible_link" href="{link}">{label}</a>' for (label, link) in details["demos"].items()])}<br>
