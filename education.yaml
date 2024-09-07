@@ -1,4 +1,8 @@
-- html: <b>Bachelor of Science</b> in <b>Computer Science (Infrastructure)</b> from <i>TU Dublin</i> <span class="grade_indicator">First Class Honors</span> | Sep 2016 - Jun 2020
+- title: Bachelor of Science
+  subject: Computer Science (Infrastructure)
+  institution: TU Dublin
+  grade: First Class Honors
+  attended: Sep 2016 - Jun 2020
   skills:
   - Algorithms
   - Android
@@ -26,7 +30,10 @@
   - Unity GameEngine
   - Virtualbox
 
-- html: <b>Leaving Certificate</b> from <i>St. Josephs CBS</i> <span class="grade_indicator">410 points</span> | Sep 2010 - Jun 2016 <br>
+- title: Leaving Certificate
+  institution: St. Josephs CBS
+  grade: 410 points
+  attended: Sep 2010 - Jun 2016
   skills:
   - English
   - Irish
@@ -36,6 +43,8 @@
   - Chemistry
   - Spanish
 
-- html: <b>KNIME L3 Certificate</b> | April 2021 <br>
+- title: KNIME L3 Certificate
+  institution: KNIME AG
+  attended: April 2021
   skills:
   - KNIME

@@ -73,14 +73,21 @@ for company, details in experience.items():
 		outfile.write('</ul>')
 
 #Education
-outfile.write(f'''<div class="section_header">Education and Certifications</div>''')
+outfile.write(f'''<div class="section_header">Education</div>''')
 for certification in education:
-	outfile.write(f'''
-		<div class="education_item">
-			<div class="education_item_header"><mark>{certification['html']}</mark></div>
-			{" ".join([skill(s) for s in certification['skills']])}
-		</div>
-	''')
+	outfile.write('<div class="education_item">')
+	outfile.write(f'<div><b>{certification['institution']}</b></div>')
+	outfile.write('<div>')
+	outfile.write(f'<i>{certification['title']}</i>')
+	if subject:=certification.get('subject'):
+		outfile.write(f', {subject}')
+	outfile.write('<div>')
+	outfile.write(certification['attended'])
+	if grade:=certification.get('grade'):
+		outfile.write(f', <span class="grade_indicator">{grade}</span>')
+	outfile.write('</div></div>')
+	outfile.write(" ".join([skill(s) for s in certification['skills']]))
+	outfile.write('</div>')
 
 #Skills
 outfile.write('<div class="section_header">Other Skills</div>')
