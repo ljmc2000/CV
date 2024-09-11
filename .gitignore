@@ -3,6 +3,5 @@ __pycache__
 assets/Degree.jpg
 assets/knime_l3.jpg
 assets/LC.jpeg
-LiamMcCormick_CV.pdf
-LiamMcCormick_CV.html
+output/*
 personal_details.yaml

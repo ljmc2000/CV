@@ -1,4 +1,4 @@
-import yaml
+import os, yaml
 
 from decorations import li
 from img_utils import image, skill
@@ -21,7 +21,8 @@ with open('personal_details.yaml') as personal_details_src:
 with open('portfolio.yaml') as portfolio_src:
 	portfolio=yaml.safe_load(portfolio_src)
 
-outfile=open("LiamMcCormick_CV.html", "w+")
+os.makedirs('output', exist_ok=True)
+outfile=open(f'output/{personal_details["name"].replace(" ","_")}_CV.html', 'w+')
 outfile.write('<html>')
 
 #head
