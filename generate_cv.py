@@ -39,7 +39,7 @@ outfile.write('</head><body>')
 
 #about me
 outfile.write(f'''
-<div style="display: inline-flex">{image('me2023.jpg',136)}<div class="aboutme invisible_links"><div style="font-size: 24px; padding-bottom: 6px">{personal_details["name"]}</div>''')
+<div style="display: inline-flex">{image(personal_details["selfie"],136)}<div class="aboutme invisible_links"><div style="font-size: 24px; padding-bottom: 6px">{personal_details["name"]}</div>''')
 
 for link, label, icon in [
 	('mailto:'+personal_details["email"], personal_details["email"], 'email-1572-svgrepo-com.svg'),
