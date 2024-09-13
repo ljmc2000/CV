@@ -41,6 +41,7 @@ outfile.write('</head><body>')
 outfile.write(f'''
 <div style="display: inline-flex">{image(personal_details["selfie"],136)}<div class="aboutme invisible_links"><div style="font-size: 24px; padding-bottom: 6px">{personal_details["name"]}</div>''')
 
+outfile.write(f'''<div>{image('house-svgrepo-com.svg',16)} {personal_details["address"]}</div>''')
 for link, label, icon in [
 	('mailto:'+personal_details["email"], personal_details["email"], 'email-1572-svgrepo-com.svg'),
 	('https://github.com/ljmc2000', 'github.com/ljmc2000', 'github.svg'),
