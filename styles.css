@@ -35,10 +35,6 @@ body {
 	font-size: 25px;
 }
 
-mark {
-	background-color: antiquewhite;
-}
-
 @media print {
 	.new-page {
 		page-break-before: always;
@@ -85,11 +81,11 @@ mark {
 }
 
 .section_header {
-	color: darkmagenta;
 	font-size: 32px;
 	font-weight: bold;
 	padding-top: 20px;
 	padding-bottom: 3px;
+	text-decoration: underline;
 }
 
 .skill_badge {
@@ -120,7 +116,6 @@ ul {
 }
 
 .ultravisible_link {
-	color: red;
 	font-weight: bolder;
 	text-decoration: none;
 }

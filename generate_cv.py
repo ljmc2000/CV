@@ -57,9 +57,7 @@ outfile.write('<div class="section_header">Experience</div>')
 for company, details in experience.items():
 	outfile.write(f'''
 	<div class="job_outline">
-		<mark>
-			<b>{details["start_date"]} to {details["end_date"]}:</b> {details["title"]} at {company}
-		</mark>
+		<b>{details["start_date"]} to {details["end_date"]}:</b> {details["title"]} at {company}
 	</div>''')
 
 	if tech_stack:=details.get('tech_stack'):
