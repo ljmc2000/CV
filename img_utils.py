@@ -26,10 +26,10 @@ if IMAGE_SCALE:=float(environ.get('IMAGE_SCALE',0)):
 		imgmck=subprocess.run(['magick', '-background', 'transparent', f'skill_icons/{skill_name}.svg', '-geometry', f'x{16*IMAGE_SCALE}', 'WEBP:-'], stdout=subprocess.PIPE)
 
 		if imgmck.returncode==0:
-			return f'<button class="skill_badge skill_badge_img"><img src="data: image/png; base64, {base64.b64encode(imgmck.stdout).decode()}"></button>'
+			return f'<img class="skill_badge_img" src="data: image/png; base64, {base64.b64encode(imgmck.stdout).decode()}">'
 
 		else:
-			return f'<button class="skill_badge skill_badge_txt"><img><span>{skill_name}</span></button>'
+			return f'<span>{skill_name}</span>'
 
 else:
 	def image(filename: str, height: int, width: int=None, *, scale: int=1, class_names='', style='') -> str:
