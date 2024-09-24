@@ -64,7 +64,7 @@ for company, details in experience.items():
 
 	if tech_stack:=details.get('tech_stack'):
 		outfile.write('<div>')
-		outfile.write(' '.join([skill(tech) for tech in tech_stack]))
+		outfile.write(' • '.join([skill(tech) for tech in tech_stack]))
 		outfile.write('</div>')
 
 	if duties:=details.get('duties'):
@@ -115,7 +115,7 @@ for name, details in portfolio.items():
 		<h3>{name}</h3>
 		<a href="{details['source']}">{details['source'].replace('ljmc2000/',"ljmc2000/<wbr>")}</a>
 		{"/".join([f'<a class="ultravisible_link" href="{link}">{label}</a>' for (label, link) in details["demos"].items()]) if not HIDE_LINKS else ""}<br>
-		{"".join([skill(s) for s in details["skills"]])}
+		{" ".join([skill(s) for s in details["skills"]])}
 		<div class="project_description">{details["description"]}</div>
 	</div>''')
 
