@@ -1,3 +1,7 @@
+a {
+	color: blue;
+}
+
 .aboutme {
 	font-size: 18px;
 	margin-left: 12px;
@@ -115,5 +119,4 @@ ul {
 
 .ultravisible_link {
 	font-weight: bolder;
-	text-decoration: none;
 }
