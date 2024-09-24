@@ -1,22 +1,19 @@
 import base64, subprocess
 from os import environ
 
-BASE_SCALE=float(environ.get('BASE_SCALE', 1.75))
-COMPRESS_IMAGES=True if environ.get('COMPRESS_IMAGES', 0) else False
-
 def asset(filename):
 	return 'assets/'+filename
 
-if COMPRESS_IMAGES:
+if IMAGE_SCALE:=float(environ.get('IMAGE_SCALE',0)):
 	def image(filename: str, height: int, width: int=None, *, scale: int=1, class_names='', style='') -> str:
 		if width:
-			w=f'{scale*BASE_SCALE*width}'
+			w=f'{scale*IMAGE_SCALE*width}'
 			width=f'width="{width}" '
 		else:
 			w=''
 			width=''
 
-		h=f'{scale*BASE_SCALE*height}'
+		h=f'{scale*IMAGE_SCALE*height}'
 		height=f'height="{height}" '
 
 		class_names=f'class="{class_names}" ' if class_names else ""
@@ -26,7 +23,7 @@ if COMPRESS_IMAGES:
 		return f'''<img {class_names}{style}{width}{height} src="data: image/jpeg; base64, {base64.b64encode(imgmck.stdout).decode()}">'''
 
 	def skill(skill_name: str) -> str:
-		imgmck=subprocess.run(['magick', '-background', 'transparent', f'skill_icons/{skill_name}.svg', '-geometry', f'x{16*BASE_SCALE}', 'WEBP:-'], stdout=subprocess.PIPE)
+		imgmck=subprocess.run(['magick', '-background', 'transparent', f'skill_icons/{skill_name}.svg', '-geometry', f'x{16*IMAGE_SCALE}', 'WEBP:-'], stdout=subprocess.PIPE)
 
 		if imgmck.returncode==0:
 			return f'<button class="skill_badge skill_badge_img"><img src="data: image/png; base64, {base64.b64encode(imgmck.stdout).decode()}"></button>'
