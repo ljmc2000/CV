@@ -1,7 +1,7 @@
 - title: Bachelor of Science
   subject: Computer Science (Infrastructure)
   institution: TU Dublin
-  grade: First Class Honors
+  grade: '<span class="IMPORTANT">First Class Honors</span>'
   attended: Sep 2016 - Jun 2020
   skills:
   - Algorithms

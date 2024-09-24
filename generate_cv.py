@@ -3,7 +3,7 @@ import os, yaml
 from decorations import li
 from img_utils import image, skill
 
-HIDE_LINKS=os.environ.get("HIDE_LINKS")
+TARGET=os.environ.get("TARGET","pdf")
 
 with open('education.yaml') as education_src:
 	education=yaml.safe_load(education_src)
@@ -34,6 +34,19 @@ outfile.write('<head>')
 with open('styles.css') as styles:
 	outfile.write('<style>')
 	outfile.write(styles.read())
+	if TARGET=="print":
+		outfile.write('''
+		.IMPORTANT {
+			text-decoration: underline;
+			text-weight: bold;
+		}''')
+	else:
+		outfile.write('''
+		.IMPORTANT {
+			color: red;
+			text-decoration: underline;
+			text-weight: bold;
+		}''')
 	outfile.write('</style>')
 
 #end head, begin body
@@ -85,7 +98,7 @@ for certification in education:
 	outfile.write('<div>')
 	outfile.write(certification['attended'])
 	if grade:=certification.get('grade'):
-		outfile.write(f', <span class="grade_indicator">{grade}</span>')
+		outfile.write(f', {grade}')
 	outfile.write('</div></div>')
 	outfile.write(" • ".join([skill(s) for s in certification['skills']]))
 	outfile.write('</div>')
@@ -114,7 +127,7 @@ for name, details in portfolio.items():
 		{image(details["preview"], 180, 180, class_names="portfolio_item_preview")}
 		<h3>{name}</h3>
 		<a href="{details['source']}">{details['source'].replace('ljmc2000/',"ljmc2000/<wbr>")}</a>
-		{"/".join([f'<a class="ultravisible_link" href="{link}">{label}</a>' for (label, link) in details["demos"].items()]) if not HIDE_LINKS else ""}<br>
+		{"/".join([f'<a class="ultravisible_link" href="{link}">{label}</a>' for (label, link) in details["demos"].items()]) if TARGET!="print" else ""}<br>
 		{" ".join([skill(s) for s in details["skills"]])}
 		<div class="project_description">{details["description"]}</div>
 	</div>''')
