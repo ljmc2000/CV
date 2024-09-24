@@ -45,7 +45,7 @@ else:
 	def skill(skill_name: str) -> str:
 		try:
 			with open(f'skill_icons/{skill_name}.svg', 'rb') as skill_icon_src:
-				return f'<button class="skill_badge skill_badge_img"><img src="data: image/svg+xml; base64, {base64.b64encode(skill_icon_src.read()).decode()}"></button>'
+				return f'<img class="skill_badge_img" src="data: image/svg+xml; base64, {base64.b64encode(skill_icon_src.read()).decode()}">'
 
 		except FileNotFoundError:
-			return f'<button class="skill_badge skill_badge_txt"><img><span>{skill_name}</span></button>'
+			return f'<span>{skill_name}</span>'

@@ -62,8 +62,7 @@ for company, details in experience.items():
 
 	if tech_stack:=details.get('tech_stack'):
 		outfile.write('<div>')
-		for tech in tech_stack:
-			outfile.write(skill(tech))
+		outfile.write(' '.join([skill(tech) for tech in tech_stack]))
 		outfile.write('</div>')
 
 	if duties:=details.get('duties'):
@@ -86,13 +85,12 @@ for certification in education:
 	if grade:=certification.get('grade'):
 		outfile.write(f', <span class="grade_indicator">{grade}</span>')
 	outfile.write('</div></div>')
-	outfile.write(" ".join([skill(s) for s in certification['skills']]))
+	outfile.write(" • ".join([skill(s) for s in certification['skills']]))
 	outfile.write('</div>')
 
 #Skills
 outfile.write('<div class="section_header">Other Skills</div>')
-for s in misc_skills:
-	outfile.write(skill(s))
+outfile.write(" • ".join([skill(s) for s in misc_skills]))
 
 #Hobbies
 outfile.write('<div class="section_header">Hobbies</div><ul>')
