@@ -4,6 +4,8 @@ from os import environ
 def asset(filename):
 	return 'assets/'+filename
 
+IM_OPTS=environ.get("IM_OPTS","").split(' ')
+
 if IMAGE_SCALE:=float(environ.get('IMAGE_SCALE',0)):
 	def image(filename: str, height: int, width: int=None, *, scale: int=1, class_names='', style='') -> str:
 		if width:
@@ -19,11 +21,11 @@ if IMAGE_SCALE:=float(environ.get('IMAGE_SCALE',0)):
 		class_names=f'class="{class_names}" ' if class_names else ""
 		style=f'style="{style}" ' if style else ""
 
-		imgmck=subprocess.run(['magick', asset(filename), '-geometry', f'{w}x{h}', 'JPG:-'], stdout=subprocess.PIPE)
+		imgmck=subprocess.run(['magick', asset(filename), '-geometry', f'{w}x{h}', *IM_OPTS, 'JPG:-'], stdout=subprocess.PIPE)
 		return f'''<img {class_names}{style}{width}{height} src="data: image/jpeg; base64, {base64.b64encode(imgmck.stdout).decode()}">'''
 
 	def skill(skill_name: str) -> str:
-		imgmck=subprocess.run(['magick', '-background', 'transparent', f'skill_icons/{skill_name}.svg', '-geometry', f'x{16*IMAGE_SCALE}', 'WEBP:-'], stdout=subprocess.PIPE)
+		imgmck=subprocess.run(['magick', '-background', 'transparent', f'skill_icons/{skill_name}.svg', '-geometry', f'x{16*IMAGE_SCALE}', *IM_OPTS, 'WEBP:-'], stdout=subprocess.PIPE)
 
 		if imgmck.returncode==0:
 			return f'<img class="skill_badge_img" src="data: image/png; base64, {base64.b64encode(imgmck.stdout).decode()}">'
