@@ -4,7 +4,8 @@ from os import environ
 def asset(filename):
 	return 'assets/'+filename
 
-IM_OPTS=environ.get("IM_OPTS","").split(' ')
+IM_OPTS=environ.get("IM_OPTS")
+IM_OPTS=IM_OPTS.split(' ') if IM_OPTS else []
 
 if IMAGE_SCALE:=float(environ.get('IMAGE_SCALE',0)):
 	def image(filename: str, height: int, width: int=None, *, scale: int=1, class_names='', style='') -> str:
