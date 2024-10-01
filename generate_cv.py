@@ -120,10 +120,11 @@ outfile.write('<div class="new-page"></div>')
 outfile.write(f'<div class="section_header">Portfolio</div>')
 i=0
 for name, details in portfolio.items():
-	if i%2==0:
+	even = i%2==0
+	if even:
 		outfile.write('<div class="portfolio_row">')
 
-	outfile.write(f'''<div class="portfolio_item">
+	outfile.write(f'''<div class="portfolio_item {"portfolio_item_left" if even else 'portfolio_item_right'}">
 		{image(details["preview"], 180, 180, class_names="portfolio_item_preview")}
 		<h3>{name}</h3>
 		<a href="{details['source']}">{details['source'].replace('ljmc2000/',"ljmc2000/<wbr>")}</a>
