@@ -90,8 +90,8 @@ for company, details in experience.items():
 outfile.write(f'''<div class="section_header">Education</div>''')
 for certification in education:
 	outfile.write('<div class="education_item">')
-	outfile.write(f'<div><b>{certification['institution']}</b></div>')
-	outfile.write('<div>')
+	outfile.write(f'<div class="education_institution">{certification['institution']}</div>')
+	outfile.write('<div class="education_item_details">')
 	outfile.write(f'<i>{certification['title']}</i>')
 	if subject:=certification.get('subject'):
 		outfile.write(f', {subject}')
