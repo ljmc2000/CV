@@ -3,12 +3,10 @@ Citi Bank:
   start_date: Oct 2020
   end_date: Jun 2023
   duties:
-  - Translated some business infrastructure sybase SQL scripts to apache hadoop as part of sybase retirement project
-  - Developed regression tests for an internal tool using the Selenium framework and Cucumber
-  - Onboarded new hires and introduce them to the project
-  - Created educational resources for Selenium and some other libraries used by the project such as picocontainer
+  - Translated old SQL scripts, created knime workflows and developed regression tests in selenium
+  - Studied the tech stack to bring about major performance improvements with trivially different code
+  - Mentored new teammates and created educational resources to help them acclimate
   - Organized code reviews to maintain and elevate code quality
-  - Developed some KNIME workflows and provided support to end users as part of the Citi KNIME team
   tech_stack:
   - Java
   - Selenium
@@ -27,8 +25,8 @@ Fidelity Investments:
   duties:
   - Worked as part of a team to maintain and improve an internal tool written in Spring and AngularJS
   - Created a dockerized version of the application
-  - Designed dynamic components for said application to streamline integrating new processes into the application
-  - Helped deploy, configure, document and maintain the UAT and Production Apache servers
+  - Improved the architecture of the program to efficiently streamline adding new features.
+  - Drafted the documentation for spinning up new instances of the project
   tech_stack:
   - Java
   - Javascript
