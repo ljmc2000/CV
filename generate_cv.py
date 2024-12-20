@@ -53,23 +53,24 @@ with open('styles.css') as styles:
 outfile.write('</head><body>')
 
 #about me
-outfile.write(f'''<table class="aboutme invisible_links"><tr>''')
+def td(label: str, icon, *, link=None, colspan=1) -> str:
+	if link:
+		outfile.write(f'<td colspan="{colspan}"><a href={link}>{image(icon,16)} {label}</a></td>')
+	else:
+		outfile.write(f'<td colspan="{colspan}">{image(icon,16)} {label}</td>')
+
+outfile.write(f'''<table class="aboutme invisible_links">''')
 outfile.write(f'''<tr><td colspan="2" style="font-size: 24px; text-align: center; padding-bottom: 6px">{personal_details["name"]}</td></tr>''')
-outfile.write('<tr><td>')
 
-for link, label, icon in [
-	('mailto:'+personal_details["email"], personal_details["email"], 'email-1572-svgrepo-com.svg'),
-	('https://github.com/ljmc2000', 'github.com/ljmc2000', 'github.svg'),
-	(personal_details['linkedin_final'], personal_details['linkedin'], 'iconmonstr-linkedin-3.svg'),
-	]:
-	outfile.write(f'''<div><a href={link}>{image(icon,16)} {label}</a></div>''')
-
-outfile.write('</td><td>')
-
-outfile.write(f'''<div>{image('cell-phone-svgrepo-com.svg',16)} {personal_details["cellnumber"]}</div>''')
-outfile.write(f'''<div>{image('house-svgrepo-com.svg',16)} {personal_details["address"]}</div>''')
-
-outfile.write('</td></tr></table>')
+outfile.write('<tr>')
+td(personal_details["email"], 'email-1572-svgrepo-com.svg', link='mailto:'+personal_details["email"])
+td(personal_details["cellnumber"], 'cell-phone-svgrepo-com.svg')
+outfile.write('</tr><tr>')
+td('github.com/ljmc2000', 'github.svg', link='https://github.com/ljmc2000')
+td(personal_details["address"], 'house-svgrepo-com.svg')
+outfile.write('</tr><tr>')
+td(personal_details['linkedin'], 'iconmonstr-linkedin-3.svg', link=personal_details['linkedin_final'], colspan=2)
+outfile.write('</tr></table>')
 
 #Experience
 outfile.write('<div class="section_header">Experience</div>')
