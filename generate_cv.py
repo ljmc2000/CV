@@ -76,6 +76,16 @@ outfile.write('</tr></table>')
 outfile.write('<div class="section_header">Profile</div>')
 outfile.write('''A tenacious, precise individual with 3 years experience in the technology sector. Capable of rapidly and accurately learning new tools as well a producing efficient, maintainable code. Currently seeking any manor of IT position in order to utilize and expand IT skills.''')
 
+#Key Skills
+outfile.write('<div class="section_header">Key Skills</div>')
+outfile.write('''<ul>
+	<li>3 years professional experience in several tech stacks mostly involving Java, but also including Spring, MySQL, Selenium and JavaScript</li>
+	<li>Full time linux user across several distros including debian, atomic fedora and archlinux</li>
+	<li>Creator of documentation in both video and textual formats</li>
+	<li>Concise communicator</li>
+	<li>Full category B drivers license</li>
+</ul>''')
+
 #Experience
 outfile.write('<div class="section_header">Experience</div>')
 for company, details in experience.items():
