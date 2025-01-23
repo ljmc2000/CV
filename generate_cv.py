@@ -72,6 +72,10 @@ outfile.write('</tr><tr>')
 td(personal_details['linkedin'], 'iconmonstr-linkedin-3.svg', link=personal_details['linkedin_final'], colspan=2)
 outfile.write('</tr></table>')
 
+#Profile
+outfile.write('<div class="section_header">Profile</div>')
+outfile.write('''A tenacious, precise individual with 3 years experience in the technology sector. Capable of rapidly and accurately learning new tools as well a producing efficient, maintainable code. Currently seeking any manor of IT position in order to utilize and expand IT skills.''')
+
 #Experience
 outfile.write('<div class="section_header">Experience</div>')
 for company, details in experience.items():
