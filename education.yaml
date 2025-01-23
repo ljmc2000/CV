@@ -1,4 +1,5 @@
 - title: Bachelor of Science
+  qqi: 8
   subject: Computer Science (Infrastructure)
   institution: TU Dublin
   grade: '<span class="IMPORTANT">First Class Honors</span>'
@@ -31,6 +32,7 @@
   - Virtualbox
 
 - title: Leaving Certificate
+  qqi: 5
   institution: St. Josephs CBS
   grade: 410 points
   attended: Sep 2010 - Jun 2016

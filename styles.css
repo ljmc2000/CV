@@ -20,18 +20,12 @@ body {
 	margin-bottom: 12px;
 }
 
-.education_institution {
-	font-size: 16px;
+.education_item .top {
 	font-weight: bold;
 }
 
-.education_item_details {
-	font-size: 16px;
-}
-
-.education_item_header {
-	font-size: 18px;
-	margin-bottom: 6px;
+.education_item .date {
+	float: right;
 }
 
 .invisible_links a {

@@ -43,7 +43,7 @@ with open('styles.css') as styles:
 	else:
 		outfile.write('''
 		.IMPORTANT {
-			color: red;
+			color: #DC1438;
 			text-decoration: underline;
 			text-weight: bold;
 		}''')
@@ -74,7 +74,7 @@ outfile.write('</tr></table>')
 
 #Profile
 outfile.write('<div class="section_header">Profile</div>')
-outfile.write('''A tenacious, precise individual with 3 years experience in the technology sector. Capable of rapidly and accurately learning new tools as well a producing efficient, maintainable code. Currently seeking any manor of IT position in order to utilize and expand IT skills.''')
+outfile.write('''A tenacious, precise individual with 3 years experience in the technology sector. Capable of rapidly and accurately learning new tools as well a producing efficient, maintainable code. Currently seeking any manor of IT position in order to utilize and expand IT skills. Full category B drivers license''')
 
 #Key Skills
 outfile.write('<div class="section_header">Key Skills</div>')
@@ -83,7 +83,6 @@ outfile.write('''<ul>
 	<li>Full time linux user across several distros including debian, atomic fedora and archlinux</li>
 	<li>Creator of documentation in both video and textual formats</li>
 	<li>Concise communicator</li>
-	<li>Full category B drivers license</li>
 </ul>''')
 
 #Experience
@@ -108,23 +107,23 @@ for company, details in experience.items():
 #Education
 outfile.write(f'''<div class="section_header">Education</div>''')
 for certification in education:
-	outfile.write('<div class="education_item">')
-	outfile.write(f'<div class="education_institution">{certification['institution']}</div>')
-	outfile.write('<div class="education_item_details">')
-	outfile.write(f'<i>{certification['title']}</i>')
-	if subject:=certification.get('subject'):
-		outfile.write(f', {subject}')
-	outfile.write('<div>')
-	outfile.write(certification['attended'])
-	if grade:=certification.get('grade'):
+	outfile.write('<div class="education_item"><div class="top">')
+	outfile.write(f'{certification["title"]}')
+	outfile.write(f'<div class="date">{certification["attended"]}</div>')
+	if subject:=certification.get("subject"):
+		outfile.write(f' in {subject}')
+	if grade:=certification.get("grade"):
 		outfile.write(f', {grade}')
-	outfile.write('</div></div>')
-	outfile.write(" • ".join([skill(s) for s in certification['skills']]))
+	outfile.write('</div>')
+
+	outfile.write(f'<i>{certification["institution"]}</i>')
+
+	#outfile.write(" • ".join([skill(s) for s in certification['skills']]))
 	outfile.write('</div>')
 
 #Skills
-outfile.write('<div class="section_header">Other Skills</div>')
-outfile.write(" • ".join([skill(s) for s in misc_skills]))
+#outfile.write('<div class="section_header">Other Skills</div>')
+#outfile.write(" • ".join([skill(s) for s in misc_skills]))
 
 #Hobbies
 outfile.write('<div class="section_header">Hobbies</div><ul>')
