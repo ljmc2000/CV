@@ -117,10 +117,11 @@ for certification in education:
 	outfile.write('</div>')
 
 	outfile.write(f'<i>{certification["institution"]}</i>')
-	outfile.write('<br>')
 
 	if skills:=certification.get('skills'):
+		outfile.write('<div class="education_item_skills">')
 		outfile.write(" • ".join([skill(s) for s in skills]))
+		outfile.write('</div>')
 		# outfile.write('<table class="education_skills_table"><tr>')
 		# for i, s in enumerate(certification['skills']):
 		# 	if i%10==0 and i!=0:

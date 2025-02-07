@@ -18,6 +18,7 @@ body {
 
 .education_item {
 	margin-bottom: 12px;
+	font-size: 16px;
 }
 
 .education_item .top {
@@ -26,6 +27,9 @@ body {
 
 .education_item .date {
 	float: right;
+}
+.education_item_skills {
+	font-size: 12px;
 }
 
 .education_skills_table td {
