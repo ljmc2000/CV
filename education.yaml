@@ -7,11 +7,10 @@
   skills:
   - Algorithms
   - Android
-  - Basic Pen Testing
   - C
   - Cloud Computing
   - CSS
-  - Database Admin
+  - DB Admin
   - Docker
   - HTML
   - Java
@@ -21,6 +20,7 @@
   - Maths
   - Networking
   - OracleDB
+  - Pen Testing
   - PHP
   - Program Design
   - Python
@@ -36,7 +36,7 @@
   institution: St. Josephs CBS
   grade: 410 points
   attended: Sep 2010 - Jun 2016
-  skills:
+  _skills:
   - English
   - Irish
   - Mathmatics
@@ -48,5 +48,5 @@
 - title: KNIME L3 Certificate
   institution: KNIME AG
   attended: April 2021
-  skills:
+  _skills:
   - KNIME
