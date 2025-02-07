@@ -55,6 +55,7 @@ body {
 @media print {
 	.new-page {
 		page-break-before: always;
+		height: 1px;
 	}
 }
 
@@ -103,8 +104,8 @@ body {
 .section_header {
 	font-size: 32px;
 	font-weight: bold;
-	padding-top: 20px;
-	padding-bottom: 3px;
+	margin-top: 20px;
+	margin-bottom: 3px;
 	text-decoration: underline;
 }
 
