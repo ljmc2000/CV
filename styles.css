@@ -17,8 +17,7 @@ body {
 }
 
 .education_item {
-	margin-bottom: 12px;
-	font-size: 16px;
+	margin-bottom: .75em;
 }
 
 .education_item .top {
@@ -49,7 +48,7 @@ body {
 }
 
 .job_outline {
-	font-size: 25px;
+	font-size: large;
 }
 
 @media print {
@@ -102,10 +101,9 @@ body {
 }
 
 .section_header {
-	font-size: 32px;
+	font-size: larger;
 	font-weight: bold;
-	margin-top: 20px;
-	margin-bottom: 3px;
+	margin-top: .75em;
 	text-decoration: underline;
 }
 
@@ -131,6 +129,7 @@ body {
 
 ul {
 	padding-left: 12px;
+	margin: 0px;
 }
 
 .ultravisible_link {
