@@ -101,10 +101,12 @@ body {
 }
 
 .section_header {
+	color: slateblue;
 	font-size: larger;
 	font-weight: bold;
 	margin-top: .75em;
-	text-decoration: underline;
+	margin-bottom: .25em;
+	border-bottom: solid;
 }
 
 .skill_badge {
