@@ -1,4 +1,5 @@
 Citi Bank:
+  company_summary: A bank headquartered in New York with over 200K employees
   title: Application Developer
   start_date: Oct 2020
   end_date: Jun 2023
@@ -19,6 +20,7 @@ Citi Bank:
   - Jira
 
 Fidelity Investments:
+  company_summary: A financial services corporation based in Boston with around 70K employees
   title: Intern
   start_date: Jan 2019
   end_date: Aug 2019
@@ -40,11 +42,13 @@ Fidelity Investments:
   - Jira
 
 Treecraft:
+  company_summary: A tree surgery provider with less than 10 employees
   title: Tree Surgeon’s Assistant
   start_date: Jun 2018
   end_date: Sep 2018
 
 Dunnes Stores:
+  company_summary: A supermarket chain with in or around 18k employees
   title: Retail Assistant
   start_date: Oct 2013
   end_date: May 2014
