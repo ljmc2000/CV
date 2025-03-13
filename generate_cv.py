@@ -49,7 +49,7 @@ outfile.write('</tr></table>')
 
 #Profile
 outfile.write('<div class="section_header">Profile</div>')
-outfile.write('''A tenacious, precise individual with 3 years experience in the technology sector. Capable of rapidly and accurately learning new tools as well a producing efficient, maintainable code. Currently seeking any manor of IT position in order to utilize and expand IT skills. Full category B drivers license''')
+outfile.write('''A passionate software developer with excellent written and oral English language communication skills. A fast learner with a high level of attention to detail. A dependable team player who who will not hesitate to make the problems of my team my own. An unusual mind capable of seeing solutions most cannot. A curious soul who never tires of learning new things.''')
 
 #Key Skills
 outfile.write('<div class="section_header">Key Skills</div>')
