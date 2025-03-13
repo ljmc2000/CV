@@ -4,10 +4,14 @@ Citi Bank:
   start_date: Oct 2020
   end_date: Jun 2023
   duties:
-  - Translated old SQL scripts, created knime workflows and developed regression tests in selenium
-  - Studied the tech stack to bring about major performance improvements with trivially different code
-  - Mentored new teammates and created educational resources to help them acclimate
+  - Developed regression tests for an internal web portal using the Selenium framework and Cucumber
+  - Onboarded new team members and helped them upskill
+  - Created educational resources for Selenium, Cucumber and some related libraries
   - Organized code reviews to maintain and elevate code quality
+  - Suggested operational improvements such as linking BitBucket pull requests to Jira tasks.
+  - Led technical discussions about updates to project tech stack
+  - Developed some KNIME workflows and provided support to end users as part of the Citi KNIME team
+  - Translated some business infrastructure sybase SQL scripts to apache hadoop as part of sybase retirement project
   tech_stack:
   - Java
   - Selenium
@@ -20,15 +24,15 @@ Citi Bank:
   - Jira
 
 Fidelity Investments:
-  company_summary: A financial services corporation based in Boston with around 70K employees
+  company_summary: A financial services corporation headquartered in Boston with around 70K employees
   title: Intern
   start_date: Jan 2019
   end_date: Aug 2019
   duties:
   - Worked as part of a team to maintain and improve an internal tool written in Spring and AngularJS
-  - Created a dockerized version of the application
-  - Improved the architecture of the program to efficiently streamline adding new features.
-  - Drafted the documentation for spinning up new instances of the project
+  - Created a proof of concept for a dockerized version of same application
+  - Designed dynamic components for said application to streamline integrating new features
+  - Helped deploy, configure, document and maintain the UAT and Production Apache servers which served the application
   tech_stack:
   - Java
   - Javascript
@@ -48,7 +52,7 @@ Treecraft:
   end_date: Sep 2018
 
 Dunnes Stores:
-  company_summary: A supermarket chain with in or around 18k employees
+  company_summary: An Irish supermarket chain with in or around 18k employees
   title: Retail Assistant
   start_date: Oct 2013
   end_date: May 2014
