@@ -1,7 +1,7 @@
 import os, yaml
 
 from decorations import li
-from img_utils import image, skill, sub_skills
+from img_utils import bullet_points, image, skill, sub_skills
 from mkhead import mkhead
 
 TARGET=os.environ.get("TARGET","pdf")
@@ -23,6 +23,10 @@ with open('misc_skills.yaml') as misc_skills_src:
 
 with open('personal_details.yaml') as personal_details_src:
 	personal_details=yaml.safe_load(personal_details_src)
+
+#util functions
+def bullet_points(points, *, className=None) -> str:
+	return f'''<ul{f' class="{className}"' if className else ''}>{'\n\t'.join(['<li>'+sub_skills(point)+'</li>' for point in points])}</ul>'''
 
 os.makedirs('output', exist_ok=True)
 outfile=open(f'output/{personal_details["name"].replace(" ","_")}_CV.html', 'w+')
@@ -56,10 +60,7 @@ outfile.write('''A passionate software developer with excellent written and oral
 
 #Key Skills
 outfile.write('<div class="section_header">Key Skills</div>')
-outfile.write('<ul>')
-for key_skill in key_skills:
-	outfile.write(f'<li>{sub_skills(key_skill)}</li>')
-outfile.write('</ul>')
+outfile.write(bullet_points(key_skills))
 
 #Experience
 outfile.write('<div class="section_header">Experience</div>')
@@ -75,10 +76,7 @@ for company, details in experience.items():
 		outfile.write('</div>')
 
 	if duties:=details.get('duties'):
-		outfile.write('<ul class="job_details">')
-		for duty in duties:
-			outfile.write(li(duty))
-		outfile.write('</ul>')
+		outfile.write(bullet_points(duties, className='job_details'))
 
 #Education
 outfile.write(f'''<div class="section_header">Education</div>''')
@@ -111,10 +109,8 @@ for certification in education:
 #outfile.write(" • ".join([skill(s) for s in misc_skills]))
 
 #Hobbies
-outfile.write('<div class="section_header">Hobbies</div><ul>')
-for hobby in hobbies:
-	outfile.write(f'<li>{hobby}</li>')
-outfile.write('</ul>')
+outfile.write('<div class="section_header">Hobbies</div>')
+outfile.write(bullet_points(hobbies))
 
 #footer
 outfile.write('<div class="references">References available upon request</div>')
