@@ -110,7 +110,7 @@ for certification in education:
 
 #Hobbies
 outfile.write('<div class="section_header">Hobbies</div>')
-outfile.write(bullet_points(hobbies))
+outfile.write(bullet_points(hobbies, className="multi_column_list"))
 
 #footer
 outfile.write('<div class="references">References available upon request</div>')

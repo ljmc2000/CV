@@ -58,6 +58,10 @@ body {
 	}
 }
 
+.multi_column_list {
+	columns: 2;
+}
+
 .portfolio_item {
 	width: 50%;
 }
