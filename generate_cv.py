@@ -1,9 +1,12 @@
 import os, yaml
 
-from img_utils import bullet_points, image, skill, sub_skills
+from img_utils import image, skill, sub_skills
 from mkhead import mkhead
 
 TARGET=os.environ.get("TARGET","pdf")
+
+with open('additional_achievements.yaml') as additional_achievements_src:
+	additional_achievements=yaml.safe_load(additional_achievements_src)
 
 with open('education.yaml') as education_src:
 	education=yaml.safe_load(education_src)
@@ -76,6 +79,10 @@ for company, details in experience.items():
 
 	if duties:=details.get('duties'):
 		outfile.write(bullet_points(duties, className='job_details'))
+
+#Additional Achievements
+outfile.write('<div class="section_header">Additional Achievements</div>')
+outfile.write(bullet_points(additional_achievements))
 
 #Education
 outfile.write(f'''<div class="section_header">Education</div>''')
