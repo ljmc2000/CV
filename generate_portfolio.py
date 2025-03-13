@@ -1,6 +1,5 @@
 import os, yaml
 
-from decorations import li
 from img_utils import image, skill
 from mkhead import mkhead
 

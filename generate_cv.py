@@ -1,6 +1,5 @@
 import os, yaml
 
-from decorations import li
 from img_utils import bullet_points, image, skill, sub_skills
 from mkhead import mkhead
 
@@ -96,12 +95,6 @@ for certification in education:
 		outfile.write('<div class="education_item_skills">')
 		outfile.write(" • ".join([skill(s) for s in skills]))
 		outfile.write('</div>')
-		# outfile.write('<table class="education_skills_table"><tr>')
-		# for i, s in enumerate(certification['skills']):
-		# 	if i%10==0 and i!=0:
-		# 		outfile.write('</tr><tr>')
-		# 	outfile.write(f'<td>{skill(s)}</td>')
-		# outfile.write('</tr></table>')
 	outfile.write('</div>')
 
 #Skills
