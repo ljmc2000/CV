@@ -1,7 +1,7 @@
 import os, yaml
 
 from decorations import li
-from img_utils import image, skill
+from img_utils import image, skill, sub_skills
 from mkhead import mkhead
 
 TARGET=os.environ.get("TARGET","pdf")
@@ -14,6 +14,9 @@ with open('experience.yaml') as experience_src:
 
 with open('hobbies.yaml') as hobbies_src:
 	hobbies=yaml.safe_load(hobbies_src)
+
+with open('key_skills.yaml') as key_skills_src:
+	key_skills=yaml.safe_load(key_skills_src)
 
 with open('misc_skills.yaml') as misc_skills_src:
 	misc_skills=yaml.safe_load(misc_skills_src)
@@ -53,15 +56,10 @@ outfile.write('''A passionate software developer with excellent written and oral
 
 #Key Skills
 outfile.write('<div class="section_header">Key Skills</div>')
-outfile.write(f'''<ul>
-	<li>Maintains an open source android application called <a href="https://f-droid.org/en/packages/ie.delilahsthings.soothingloop/">Soothing Noise Player</a> with 25 stars on GitHub</li>
-	<li>5 years of experience with the Java programming language, including {skill('Spring')}, {skill('Android')}, {skill('Selenium')} and cross platform networked applications</li>
-	<li>Built full stack web applications with web frameworks such as {skill('Python Flask')} and Express and frontend frameworks like {skill('AngularJS')} and {skill('Qt5')}</li>
-	<li>Administers SQL databases like {skill('PostgreSQL')} and {skill('MySQL')} entirely from the commandline</li>
-	<li>Can manage many common server applications like {skill('Apache')} and nginx</li>
-	<li>Avid version control utilizer with a long history of mostly helpful commit messages</li>
-	<li>Drafts great textual and video documentation</li>
-</ul>''')
+outfile.write('<ul>')
+for key_skill in key_skills:
+	outfile.write(f'<li>{sub_skills(key_skill)}</li>')
+outfile.write('</ul>')
 
 #Experience
 outfile.write('<div class="section_header">Experience</div>')

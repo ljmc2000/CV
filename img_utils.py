@@ -1,4 +1,4 @@
-import base64, subprocess
+import base64, re, subprocess
 from os import environ
 
 def asset(filename):
@@ -52,3 +52,7 @@ else:
 
 		except FileNotFoundError:
 			return f'<span>{skill_name}</span>'
+
+skill_pattern = re.compile(r'skill\(([\w ]+)\)')
+def sub_skills(string):
+	return skill_pattern.sub(lambda match: skill(match.group(1)), string)
