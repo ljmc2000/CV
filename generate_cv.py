@@ -53,11 +53,14 @@ outfile.write('''A passionate software developer with excellent written and oral
 
 #Key Skills
 outfile.write('<div class="section_header">Key Skills</div>')
-outfile.write('''<ul>
-	<li>3 years professional experience in several tech stacks mostly involving Java, but also including Spring, MySQL, Selenium and JavaScript</li>
-	<li>Full time linux user across several distros including debian, atomic fedora and archlinux</li>
-	<li>Creator of documentation in both video and textual formats</li>
-	<li>Concise communicator</li>
+outfile.write(f'''<ul>
+	<li>Maintains an open source android application called <a href="https://f-droid.org/en/packages/ie.delilahsthings.soothingloop/">Soothing Noise Player</a> with 25 stars on GitHub</li>
+	<li>5 years of experience with the Java programming language, including Spring, Android, Selenium and cross platform networked applications</li>
+	<li>Built full stack web applications with web frameworks such as {skill('Python Flask')} and Express and frontend frameworks like {skill('AngularJS')} and {skill('Qt5')}</li>
+	<li>Administers SQL databases like {skill('PostgreSQL')} and {skill('MySQL')} entirely from the commandline</li>
+	<li>Can manage many common server applications like {skill('Apache')} and nginx</li>
+	<li>Avid version control utilizer with a long history of mostly helpful commit messages</li>
+	<li>Drafts great textual and video documentation</li>
 </ul>''')
 
 #Experience
