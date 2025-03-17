@@ -12,7 +12,6 @@ a {
 }
 
 body {
-	margin: 30px;
 	font-size: 12px;
 }
 
@@ -52,9 +51,19 @@ body {
 }
 
 @media print {
+	@page {
+		margin: 30px;
+	}
+
 	.new-page {
 		page-break-before: always;
 		height: 1px;
+	}
+}
+
+@media screen {
+	body {
+		margin: 30px;
 	}
 }
 
@@ -101,7 +110,7 @@ body {
 	font-size: xx-large;
 	font-weight: bold;
 	text-align: center;
-	margin: 40px;
+	margin: 30px;
 }
 
 .section_header {
