@@ -7,7 +7,14 @@ def asset(filename):
 IM_OPTS=environ.get("IM_OPTS")
 IM_OPTS=IM_OPTS.split(' ') if IM_OPTS else []
 
-if IMAGE_SCALE:=float(environ.get('IMAGE_SCALE',0)):
+if environ.get('NO_IMG'):
+	def image(filename: str, *args, **kargs):
+		return f'<img">'
+
+	def skill(skill_name: str):
+		return f'<img alt="{skill_name}">'
+
+elif IMAGE_SCALE:=float(environ.get('IMAGE_SCALE',0)):
 	def image(filename: str, height: int, width: int=None, *, scale: int=1, class_names='', style='') -> str:
 		if width:
 			w=f'{scale*IMAGE_SCALE*width}'
