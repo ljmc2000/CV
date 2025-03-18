@@ -33,7 +33,7 @@ def bullet_points(points, *, className=None) -> str:
 os.makedirs('output', exist_ok=True)
 outfile=open(f'output/{personal_details["name"].replace(" ","_")}_CV.html', 'w+')
 outfile.write('<html>')
-mkhead(outfile, TARGET)
+mkhead(outfile, TARGET, font_size='16px')
 outfile.write('<body>')
 
 #about me

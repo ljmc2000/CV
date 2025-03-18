@@ -1,10 +1,11 @@
-def mkhead(outfile, TARGET='pdf'):
+def mkhead(outfile, TARGET='pdf', font_size='12px'):
 	#head
 	outfile.write('<head>')
 
 	#style
 	with open('styles.css') as styles:
 		outfile.write('<style>')
+		outfile.write(f'body {{ font-size: {font_size}; }}')
 		outfile.write(styles.read())
 		if TARGET=="print":
 			outfile.write('''
