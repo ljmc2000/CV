@@ -12,7 +12,7 @@ if environ.get('NO_IMG'):
 		return f'<img">'
 
 	def skill(skill_name: str):
-		return f'<img alt="{skill_name}">'
+		return skill_name
 
 elif IMAGE_SCALE:=float(environ.get('IMAGE_SCALE',0)):
 	def image(filename: str, height: int, width: int=None, *, scale: int=1, class_names='', style='') -> str:
