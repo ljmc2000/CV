@@ -3,7 +3,7 @@ a {
 }
 
 .aboutme {
-	font-size: 18px;
+	font-size: x-large;
 	margin: auto;
 }
 
@@ -12,7 +12,7 @@ a {
 }
 
 body {
-	font-size: 12px;
+	font-size: 16px;
 }
 
 .education_item {
@@ -21,13 +21,6 @@ body {
 
 .education_item .top {
 	font-weight: bold;
-}
-
-.education_item .date {
-	float: right;
-}
-.education_item_skills {
-	font-size: 12px;
 }
 
 .education_skills_table td {
@@ -43,11 +36,11 @@ body {
 
 .job_details {
 	margin-top: 1px;
-	margin-bottom: 7px;
+	margin-bottom: .5em;
 }
 
 .job_outline {
-	font-size: large;
+	font-size: 1.125em;
 }
 
 @media print {
@@ -60,7 +53,7 @@ body {
 		height: 1px;
 	}
 
-	.portfolio_item {
+	.portfolio_item, .section {
 		break-inside: avoid;
 	}
 }
@@ -79,7 +72,7 @@ body {
 }
 
 .portfolio_item {
-	margin-bottom: 30px;
+	margin-bottom: 2.5em;
 }
 
 .portfolio_item_name {
@@ -114,7 +107,7 @@ body {
 
 .section_header {
 	color: slateblue;
-	font-size: larger;
+	font-size: 1.25em;
 	font-weight: bold;
 	margin-top: .75em;
 	margin-bottom: .25em;
@@ -123,17 +116,17 @@ body {
 
 .skill_badge {
 	vertical-align: middle;
-	height: 18px;
+	height: 1.5em;
 	margin: .5px;
 }
 
 .skill_badge_img {
-	height: 12px;
-	vertical-align: top;
+	height: .75em;
+	vertical-align: baseline;
 }
 
 .skill_badge_img > img {
-	height: 16px;
+	height: 1.25em;
 }
 
 .skill_badge_txt {
@@ -142,7 +135,7 @@ body {
 }
 
 ul {
-	padding-left: 12px;
+	padding-left: 1em;
 	margin: 0px;
 }
 

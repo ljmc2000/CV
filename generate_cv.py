@@ -57,14 +57,19 @@ td(personal_details['linkedin'], 'iconmonstr-linkedin-3.svg', link=personal_deta
 outfile.write('</tr></table>')
 
 #Profile
+outfile.write('<div class="section">')
 outfile.write('<div class="section_header">Profile</div>')
 outfile.write('''A passionate software developer with excellent written and oral English language communication skills. A fast learner with a high level of attention to detail. A dependable team player who who will not hesitate to make the problems of my team my own. An unusual mind capable of seeing solutions most cannot. A curious soul who never tires of learning new things.''')
+outfile.write('</div>')
 
 #Key Skills
+outfile.write('<div class="section">')
 outfile.write('<div class="section_header">Key Skills</div>')
 outfile.write(bullet_points(key_skills))
+outfile.write('</div>')
 
 #Experience
+outfile.write('<div class="section">')
 outfile.write('<div class="section_header">Experience</div>')
 for company, details in experience.items():
 	outfile.write(f'''
@@ -79,21 +84,25 @@ for company, details in experience.items():
 
 	if duties:=details.get('duties'):
 		outfile.write(bullet_points(duties, className='job_details'))
+outfile.write('</div>')
 
 #Additional Achievements
+outfile.write('<div class="section">')
 outfile.write('<div class="section_header">Additional Achievements</div>')
 outfile.write(bullet_points(additional_achievements))
+outfile.write('</div>')
 
 #Education
+outfile.write('<div class="section">')
 outfile.write(f'''<div class="section_header">Education</div>''')
 for certification in education:
 	outfile.write('<div class="education_item"><div class="top">')
 	outfile.write(f'{certification["title"]}')
-	outfile.write(f'<div class="date">{certification["attended"]}</div>')
 	if subject:=certification.get("subject"):
 		outfile.write(f' in {subject}')
 	if grade:=certification.get("grade"):
 		outfile.write(f', {grade}')
+	outfile.write(f' ({certification["attended"]})')
 	outfile.write('</div>')
 
 	outfile.write(f'<i>{certification["institution"]}</i>')
@@ -103,14 +112,17 @@ for certification in education:
 		outfile.write(" • ".join([skill(s) for s in skills]))
 		outfile.write('</div>')
 	outfile.write('</div>')
+outfile.write('</div>')
 
 #Skills
 #outfile.write('<div class="section_header">Other Skills</div>')
 #outfile.write(" • ".join([skill(s) for s in misc_skills]))
 
 #Hobbies
+outfile.write('<div class="section">')
 outfile.write('<div class="section_header">Hobbies</div>')
 outfile.write(bullet_points(hobbies, className="multi_column_list"))
+outfile.write('</div>')
 
 #footer
 outfile.write('<div class="references">References available upon request</div>')
