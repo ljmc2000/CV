@@ -17,22 +17,21 @@ outfile.write('<html>')
 
 mkhead(outfile, TARGET)
 
-i=0
+outfile.write('<div class="portfolio">')
 for name, details in portfolio.items():
-	even = i%2==0
-	if even:
-		outfile.write('<div class="portfolio_row">')
-
-	outfile.write(f'''<div class="portfolio_item {"portfolio_item_left" if even else 'portfolio_item_right'}">
+	outfile.write(f'''<div class="portfolio_item">
 		{image(details["preview"], 180, 180, class_names="portfolio_item_preview")}
-		<h3>{name}</h3>
-		<a href="{details['source']}">{details['source'].replace('ljmc2000/',"ljmc2000/<wbr>")}</a>
-		{"/".join([f'<a class="ultravisible_link" href="{link}">{label}</a>' for (label, link) in details["demos"].items()]) if TARGET!="print" else ""}<br>
+		<div>
+			<span class="portfolio_item_name">{name}</span>
+			<a href="{details['video']}">Demo Video</a>
+		</div>
 		{" ".join([skill(s) for s in details["skills"]])}
 		<div class="project_description">{details["description"]}</div>
+		<div>
+			{f"Try it for yourself: \
+			{' '.join([f'<a href="{link}">{label}</a>' for label,link in demos.items()])}" if (demos:=details.get('demos')) else ''}
+		</div>
+		<div>Source code available at <a href="{details['source']}">{details['source']}</a></div>
+		<div class="sep"></div>
 	</div>''')
-
-	if i%2==1:
-		outfile.write('</div>')
-
-	i+=1
+outfile.write('</div>')
