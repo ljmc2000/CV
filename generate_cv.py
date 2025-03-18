@@ -59,7 +59,7 @@ outfile.write('</tr></table>')
 #Profile
 outfile.write('<div class="section">')
 outfile.write('<div class="section_header">Profile</div>')
-outfile.write('''A passionate software developer with excellent written and oral English language communication skills. A fast learner with a high level of attention to detail. A dependable team player who who will not hesitate to make the problems of my team my own. An unusual mind capable of seeing solutions most cannot. A curious soul who never tires of learning new things.''')
+outfile.write('''I am a TU qualified Software Developer with over 3-years experience on IT teams in international financial institutions. I learn quickly and work with a high level of attention to detail. I am quick to identify problems and tenaciously seek solutions. Being part of a team, I can be depended on to work collaboratively or independently as required. Continuous learning is important for my curious mind.''')
 outfile.write('</div>')
 
 #Key Skills
@@ -125,7 +125,10 @@ outfile.write(bullet_points(hobbies, className="multi_column_list"))
 outfile.write('</div>')
 
 #footer
+outfile.write('<div class="footer">')
 outfile.write('<div class="references">References available upon request</div>')
+outfile.write('<div class="thanks4reading">Thank you for your time in reading my CV</div>')
+outfile.write('</div>')
 
 #end
 outfile.write('</body></html>')
