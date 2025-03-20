@@ -21,6 +21,3 @@ def mkhead(outfile, TARGET='pdf', font_size='12px'):
 				text-weight: bold;
 			}''')
 		outfile.write('</style>')
-
-	#end head
-	outfile.write('<body>')

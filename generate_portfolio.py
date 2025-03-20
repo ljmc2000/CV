@@ -17,6 +17,7 @@ outfile.write('<html>')
 
 mkhead(outfile, TARGET)
 
+outfile.write('<body>')
 outfile.write('<div class="portfolio">')
 for name, details in portfolio.items():
 	outfile.write(f'''<div class="portfolio_item">
@@ -35,3 +36,5 @@ for name, details in portfolio.items():
 		<div class="sep"></div>
 	</div>''')
 outfile.write('</div>')
+outfile.write('</body>')
+outfile.write('</html>')
