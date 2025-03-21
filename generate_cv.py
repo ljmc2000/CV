@@ -59,7 +59,7 @@ outfile.write('</tr></table>')
 #Profile
 outfile.write('<div class="section">')
 outfile.write('<div class="section_header">Profile</div>')
-outfile.write('''I am a TU qualified Software Developer with over 3-years experience on IT teams in international financial institutions. I learn quickly and work with a high level of attention to detail. I am quick to identify problems and tenaciously seek solutions. Being part of a team, I can be depended on to work collaboratively or independently as required. Continuous learning is important for my curious mind.''')
+outfile.write('''I am a TU qualified Software Developer with over 3-years' experience on IT teams in international financial institutions. I learn quickly and work with a high level of attention to detail. I am quick to identify problems and tenaciously seek solutions. Being part of a team, I can be depended on to work collaboratively or independently as required. Continuous learning is important for my curious mind.''')
 outfile.write('</div>')
 
 #Key Skills
