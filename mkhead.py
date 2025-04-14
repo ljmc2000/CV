@@ -2,6 +2,9 @@ def mkhead(outfile, TARGET='pdf', font_size='12px'):
 	#head
 	outfile.write('<head>')
 
+	#utf8
+	outfile.write('<meta charset="UTF-8">')
+
 	#style
 	with open('styles.css') as styles:
 		outfile.write('<style>')
@@ -21,3 +24,5 @@ def mkhead(outfile, TARGET='pdf', font_size='12px'):
 				text-weight: bold;
 			}''')
 		outfile.write('</style>')
+
+	outfile.write('</head>')
