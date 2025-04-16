@@ -1,0 +1,13 @@
+body {
+	background-color: #FDF6E3;
+}
+
+.portfolio_item_video {
+	width: 640px;
+	height: 360px;
+}
+
+.portfolio_item_text {
+	padding: 1em;
+	width: 640px;
+}
