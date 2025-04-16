@@ -1,0 +1,59 @@
+.aboutme {
+	font-size: x-large;
+	margin: auto;
+}
+
+.aboutme td {
+	vertical-align: top;
+}
+
+.education_item {
+	margin-bottom: .75em;
+}
+
+.education_item .top {
+	font-weight: bold;
+}
+
+.education_skills_table td {
+	text-align: center;
+	padding-left: .5em;
+	padding-right: .5em;
+}
+
+.footer {
+	text-align: center;
+	margin: 30px;
+
+	.references {
+		font-size: xx-large;
+		font-weight: bold;
+	}
+
+	.thanks4reading {
+		font-size: x-large;
+		font-style: italic;
+	}
+}
+
+.job_details {
+	margin-top: 1px;
+	margin-bottom: .5em;
+}
+
+.job_outline {
+	font-size: 1.125em;
+}
+
+.multi_column_list {
+	columns: 2;
+}
+
+.section_header {
+	color: slateblue;
+	font-size: 1.25em;
+	font-weight: bold;
+	margin-top: .75em;
+	margin-bottom: .25em;
+	border-bottom: solid;
+}
