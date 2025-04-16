@@ -24,18 +24,18 @@ for name, details in portfolio.items():
 	video=''
 
 	if youtube := details.get('youtube'):
-		video = f'<iframe width="560" height="315" src="https://www.youtube.com/embed/{youtube}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+		video = f'<iframe width="1280" height="720" src="https://www.youtube.com/embed/{youtube}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
 
 	elif webm := details.get('webm'):
 		video = f'''
-		<video width="560" height="315" controls>
+		<video width="1280" height="720" controls>
 			<source src="{webm}" type="video/webm">
 		</video>'''
 
 	outfile.write(f'''<div class="portfolio_item">
 		<h2>{name}</h2>
 		<div>
-			<div class="portfolio_video_item">
+			<div class="portfolio_item_video">
 				{video}
 			</div>
 			<div class="portfolio_item_text">
