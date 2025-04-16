@@ -14,6 +14,7 @@ with open('portfolio.yaml') as portfolio_src:
 os.makedirs('output', exist_ok=True)
 outfile=open(f'output/{personal_details["name"].replace(" ","_")}_portfolio.html', 'w+')
 outfile.write('<html>')
+outfile.write('<title>My Portfolio</title>')
 
 mkhead(outfile, 'portfolio', TARGET, '1.5em')
 
