@@ -41,6 +41,7 @@ for name, details in portfolio.items():
 			<div class="portfolio_item_text">
 				{" ".join([skill(s) for s in details["skills"]])}
 				<div class="project_description">{details["description"]}</div>
+				<div style="height: 1em"></div>
 				<div>
 					{f"Try it for yourself: \
 					{' '.join([f'<a href="{link}">{label}</a>' for label,link in demos.items()])}" if (demos:=details.get('demos')) else ''}
