@@ -28,7 +28,7 @@ for name, details in portfolio.items():
 	elif webm := details.get('webm'):
 		video = f'''
 		<video width="560" height="315" controls>
-			<source src="videos/{webm}" type="video/webm">
+			<source src="{webm}" type="video/webm">
 		</video>'''
 
 	outfile.write(f'''<div class="portfolio_item">
