@@ -15,16 +15,29 @@ os.makedirs('output', exist_ok=True)
 outfile=open(f'output/{personal_details["name"].replace(" ","_")}_portfolio.html', 'w+')
 outfile.write('<html>')
 
-mkhead(outfile, 'portfolio', TARGET)
+mkhead(outfile, 'portfolio', TARGET, '1.5em')
 
 outfile.write('<body>')
 outfile.write('<div class="portfolio">')
 for name, details in portfolio.items():
+	video=''
+
+	if youtube := details.get('youtube'):
+		video = f'<iframe width="560" height="315" src="https://www.youtube.com/embed/{youtube}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+
+	elif webm := details.get('webm'):
+		video = f'''
+		<video width="560" height="315" controls>
+			<source src="videos/{webm}" type="video/webm">
+		</video>'''
+
 	outfile.write(f'''<div class="portfolio_item">
 		<h2>{name}</h2>
-		<div style="display: flex;">
-			{image(details['preview'], 100, 100)}
-			<div>
+		<div>
+			<div class="portfolio_video_item">
+				{video}
+			</div>
+			<div class="portfolio_item_text">
 				{" ".join([skill(s) for s in details["skills"]])}
 				<div class="project_description">{details["description"]}</div>
 				<div>

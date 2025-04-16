@@ -8,7 +8,7 @@ Soothing Noise Player:
   source: https://github.com/ljmc2000/NoiseLooper
   demos:
     download: https://f-droid.org/en/packages/ie.delilahsthings.soothingloop
-  video: https://youtu.be/LIJsYYhpsC0
+  youtube: LIJsYYhpsC0
 
 Chessboard2Net:
   description: A rewrite of Chessboard.Net in node and AngularJS with additional features such as custom colours on pieces, the storing and playback of replays, spectating in progress matches, all rules of chess working as expected and the entire additional game of checkers. This application is not intercompatible with Chessboard.net due to Chessboard.net using a very java specific communication protocol, and the browser being unable to deal with raw tcp sockets.
@@ -24,7 +24,7 @@ Chessboard2Net:
   source: https://github.com/ljmc2000/Chessboard2Net
   demos:
     live instance: https://chessboardnet.delilahsthings.ie
-  video: https://www.youtube.com/watch?v=jRb4yOLAqn8
+  youtube: jRb4yOLAqn8
 
 
 Nothesia:
@@ -36,7 +36,7 @@ Nothesia:
   - OpenGL
   preview: NothesiaPreview.png
   source: https://github.com/ljmc2000/nothesia
-  video: https://youtu.be/h44gcPVK7eA
+  youtube: h44gcPVK7eA
 
 VirtualConcertHall:
   description: My collage final year project. Utilizing the power of Microsoft Azure, the QT5 framework, python flask, MIDI, MongoDB, and Docker containers, this project allows musicians with MIDI compatible instruments to jam together across distinct geolocations.
@@ -49,7 +49,7 @@ VirtualConcertHall:
   - Microsoft Azure
   preview: VirtualConcertHallPreview.png
   source: https://github.com/ljmc2000/VirtualConcertHall
-  video: https://www.youtube.com/watch?v=8XXBoIQZL4s
+  youtube: 8XXBoIQZL4s
 
 Oh Christmas-Tree:
   description: An assignment for the "Game Engines" module. Generate a forest of trees with random heights and positions. Made in the Unity engine with C# Scripting.
@@ -58,7 +58,7 @@ Oh Christmas-Tree:
   - C#
   preview: ChristmasTreesPreview.png
   source: https://github.com/ljmc2000/GameEngines1Assignment
-  video: https://www.youtube.com/watch?v=ltsh8RBHQcY
+  webm: GE1Demo.webm
 
 Chessboard.net:
   description: A project for android programming in 3rd year. Utilizing Android Studio, OpenJDK, TCPIP, python flask, MongoDB, XML and Inkscape, I made a simple application to allow 2 human opponents to play chess. The application kept a tally of victories and losses and allowed extra chess sets to be unlocked upon winning a certain number of games.
@@ -71,7 +71,7 @@ Chessboard.net:
   - UDP
   source: https://github.com/ljmc2000/Chessboard.net
   preview: ChessboardPreview.png
-  video: https://youtu.be/MnvaOpltS2Y
+  youtube: MnvaOpltS2Y
 
 Fishy Chips V2:
   description: A rewrite of my first PHP website under a new environment (python as a Common Gateway Interface scripting language) with a high degree of compatiblilty with the original. An instance of V1 and an instance of V2 could use the same database with minimal changes.
@@ -84,7 +84,7 @@ Fishy Chips V2:
   source: https://github.com/ljmc2000/fishy-chips-rewrite
   demos:
     live instance: https://fishychipsv2.delilahsthings.ie
-  video: https://youtube.com/watch?v=jvCFFNhoMMQ&t=280
+  youtube: jvCFFNhoMMQ?t=280
 
 Fishy Chips V1:
   description: My first interactive website, developed in 2nd year for a collage module, for the fictional restaraunt "Fishy Chips". Utilizing HTML, PHP and MySQL, it allowed a user to fill a shopping cart, order food, cancel an unfulfilled order or browse past orders. It also allowed the owner to mark orders as complete or dispatched.
@@ -96,7 +96,7 @@ Fishy Chips V1:
   source: https://github.com/ljmc2000/fishy-chips
   demos:
     live instance: https://fishychipsv1.delilahsthings.ie
-  video: https://youtube.com/watch?v=jvCFFNhoMMQ
+  youtube: jvCFFNhoMMQ
 
 Solar System:
   description: Generate an animated model of our solar system. Calculate absolute positions of planets and moons relative to their planets and the sun. Individual frames are drawn as SVG files then compiled into an animation using ImageMagick.
@@ -106,4 +106,4 @@ Solar System:
   - ImageMagick
   preview: SolarSystemPreview.png
   source: https://github.com/ljmc2000/solar-system
-  video: https://www.youtube.com/watch?v=0rkvRAaAAcE
+  youtube: 0rkvRAaAAcE
