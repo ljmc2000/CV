@@ -1,3 +1,17 @@
+Sketchchat:
+  description: My own personal blogging website on which I was hoping to catch some of the refugees of the reddit exodus of 2023 before my timeline went to bedlam. It allows users to upload text posts, image gallery posts or sketch posts, which are diachrome images that can be created in an editor that runs in the browser and is written in pure HTML+javascript. In fact the whole frontend has no javascript framework.
+  skills:
+    - Python
+    - Python AIOHTTP
+    - PostgreSQL
+    - HTML
+    - CSS
+    - Javascript
+  preview: skethchat.png
+  source: https://github.com/ljmc2000/sketchchat
+  demos: {}
+  youtube: https://youtu.be/RWw87D09tyc
+
 Soothing Noise Player:
   description: On desktop there is an application called blanket which allows mixing and matching various sound effects both included with the app and imported from the filesystem. I felt this would be useful to have on the go and so made an android application, borrowing some icons and public domain sound effects (with the original author's blessing). It runs completely offline, all sounds loop seemlessly and the apk comes in at only 6 megabytes. I've added various features such as a sleep timer overtime by user request.
   skills:
