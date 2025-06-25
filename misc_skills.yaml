@@ -3,6 +3,7 @@
 - BitBucket
 - Curl
 - Debian Linux
+- Dovecot
 - Fedora Linux
 - FFmpeg
 - GnuPG
@@ -13,6 +14,7 @@
 - Kdenlive
 - Krita
 - Markdown
+- Postfix
 - PostgreSQL Stored Procedures
 - Python AIOHTTP
 - Nginx

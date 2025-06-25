@@ -47,25 +47,23 @@ outfile.write(f'''<table class="aboutme invisible_links">''')
 outfile.write(f'''<tr><td colspan="2" style="font-size: 24px; text-align: center; padding-bottom: 6px">{personal_details["name"]}</td></tr>''')
 
 outfile.write('<tr>')
-td(personal_details["email"], 'email-1572-svgrepo-com.svg', link='mailto:'+personal_details["email"])
+td(personal_details["email"], 'email-1572-svgrepo-com.svg', link='mailto:'+personal_details["email"], colspan=2)
+outfile.write('</tr><tr>')
+td("delilahsthings.ie", 'Globe_icon.svg', link="https://delilahsthings.ie")
 td(personal_details["cellnumber"], 'cell-phone-svgrepo-com.svg')
 outfile.write('</tr><tr>')
 td('github.com/ljmc2000', 'github.svg', link='https://github.com/ljmc2000')
 td(personal_details["address"], 'house-svgrepo-com.svg')
-outfile.write('</tr><tr>')
-td(personal_details['linkedin'], 'iconmonstr-linkedin-3.svg', link=personal_details['linkedin_final'], colspan=2)
+#outfile.write('</tr><tr>')
+#td(personal_details['linkedin'], 'iconmonstr-linkedin-3.svg', link=personal_details['linkedin_final'], colspan=2)
 outfile.write('</tr></table>')
 
 #Profile
 outfile.write('<div class="section">')
 outfile.write('<div class="section_header">Profile</div>')
 outfile.write('''I am a TU qualified Software Developer with over 3-years' experience on IT teams in international financial institutions. I learn quickly and work with a high level of attention to detail. I am quick to identify problems and tenaciously seek solutions. Being part of a team, I can be depended on to work collaboratively or independently as required. Continuous learning is important for my curious mind.''')
-outfile.write('</div>')
-
-#Key Skills
-outfile.write('<div class="section">')
-outfile.write('<div class="section_header">Key Skills</div>')
-outfile.write(bullet_points(key_skills))
+outfile.write('<div style="height: .75em"></div>')
+outfile.write('I am eligible for the <a href="https://jobsplus.ie">JobsPlus Incentive</a>. A prospective employer could be entitled to a grant of €7,500 payable over 18 months.')
 outfile.write('</div>')
 
 #Experience
@@ -84,6 +82,12 @@ for company, details in experience.items():
 
 	if duties:=details.get('duties'):
 		outfile.write(bullet_points(duties, className='job_details'))
+outfile.write('</div>')
+
+#Key Skills
+outfile.write('<div class="section">')
+outfile.write('<div class="section_header">Key Skills</div>')
+outfile.write(bullet_points(key_skills))
 outfile.write('</div>')
 
 #Additional Achievements
