@@ -54,8 +54,8 @@ td(personal_details["cellnumber"], 'cell-phone-svgrepo-com.svg')
 outfile.write('</tr><tr>')
 td('github.com/ljmc2000', 'github.svg', link='https://github.com/ljmc2000')
 td(personal_details["address"], 'house-svgrepo-com.svg')
-#outfile.write('</tr><tr>')
-#td(personal_details['linkedin'], 'iconmonstr-linkedin-3.svg', link=personal_details['linkedin_final'], colspan=2)
+outfile.write('</tr><tr>')
+td(personal_details['linkedin'], 'iconmonstr-linkedin-3.svg', link=personal_details['linkedin_final'], colspan=2)
 outfile.write('</tr></table>')
 
 #Profile
