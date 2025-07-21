@@ -9,10 +9,7 @@ IM_OPTS=IM_OPTS.split(' ') if IM_OPTS else []
 
 if environ.get('NO_IMG'):
 	def image(filename: str, *args, **kargs):
-		return f'<img">'
-
-	def skill(skill_name: str):
-		return skill_name
+		return f'<img>'
 
 elif IMAGE_SCALE:=float(environ.get('IMAGE_SCALE',0)):
 	def image(filename: str, height: int, width: int=None, *, scale: int=1, class_names='', style='') -> str:
@@ -32,15 +29,6 @@ elif IMAGE_SCALE:=float(environ.get('IMAGE_SCALE',0)):
 		imgmck=subprocess.run(['magick', asset(filename), '-geometry', f'{w}x{h}', *IM_OPTS, 'JPG:-'], stdout=subprocess.PIPE)
 		return f'''<img {class_names}{style} src="data: image/jpeg; base64, {base64.b64encode(imgmck.stdout).decode()}">'''
 
-	def skill(skill_name: str) -> str:
-		imgmck=subprocess.run(['magick', '-background', 'transparent', f'skill_icons/{skill_name}.svg', '-geometry', f'x{16*IMAGE_SCALE}', *IM_OPTS, 'WEBP:-'], stdout=subprocess.PIPE)
-
-		if imgmck.returncode==0:
-			return f'<img class="skill_badge_img" src="data: image/png; base64, {base64.b64encode(imgmck.stdout).decode()}">'
-
-		else:
-			return f'<span>{skill_name}</span>'
-
 else:
 	def image(filename: str, height: int, width: int=None, *, scale: int=1, class_names='', style='') -> str:
 		mimetype=subprocess.run(['file', '-b', '--mime-type', asset(filename)], stdout=subprocess.PIPE)
@@ -52,13 +40,8 @@ else:
 		with open(asset(filename), 'rb') as f:
 			return f'<img {class_names}{style} src="data: {mimetype.stdout.decode()}; base64, {base64.b64encode(f.read()).decode()}">'
 
-	def skill(skill_name: str) -> str:
-		try:
-			with open(f'skill_icons/{skill_name}.svg', 'rb') as skill_icon_src:
-				return f'<img class="skill_badge_img" src="data: image/svg+xml; base64, {base64.b64encode(skill_icon_src.read()).decode()}">'
-
-		except FileNotFoundError:
-			return f'<span>{skill_name}</span>'
+def skill(skill_name: str) -> str:
+	return f'<span class="skill">{skill_name}</span>'
 
 skill_pattern = re.compile(r'skill\(([\w ]+)\)')
 def sub_skills(string):
