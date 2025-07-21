@@ -5,9 +5,6 @@ from mkhead import mkhead
 
 TARGET=os.environ.get("TARGET","pdf")
 
-with open('additional_achievements.yaml') as additional_achievements_src:
-	additional_achievements=yaml.safe_load(additional_achievements_src)
-
 with open('education.yaml') as education_src:
 	education=yaml.safe_load(education_src)
 
@@ -61,7 +58,7 @@ outfile.write('</tr></table>')
 #Profile
 outfile.write('<div class="section">')
 outfile.write('<div class="section_header">Profile</div>')
-outfile.write('''I am a TU qualified Software Developer with over 3-years' experience on IT teams in international financial institutions. I learn quickly and work with a high level of attention to detail. I am quick to identify problems and tenaciously seek solutions. Being part of a team, I can be depended on to work collaboratively or independently as required. Continuous learning is important for my curious mind.''')
+outfile.write('''I am a TU qualified Software Developer with over 3-years' experience on IT teams in international financial institutions. I also maintain an open source android application called <a href="https://f-droid.org/en/packages/ie.delilahsthings.soothingloop/">Soothing Noise Player</a> with over 40 stars on GitHub. I learn quickly and work with a high level of attention to detail. I am quick to identify problems and tenaciously seek solutions. Being part of a team, I can be depended on to work collaboratively or independently as required. Continuous learning is important for my curious mind.''')
 outfile.write('<div style="height: .75em"></div>')
 outfile.write('I am eligible for the <a href="https://jobsplus.ie">JobsPlus Incentive</a>. A prospective employer could be entitled to a grant of €7,500 payable over 18 months.')
 outfile.write('</div>')
@@ -75,11 +72,6 @@ for company, details in experience.items():
 		<b>{details["start_date"]} to {details["end_date"]}:</b> {details["title"]} at {company}{', '+company_summary if (company_summary:=details.get("company_summary")) else None}
 	</div>''')
 
-	if tech_stack:=details.get('tech_stack'):
-		outfile.write('<div>')
-		outfile.write(' • '.join([skill(tech) for tech in tech_stack]))
-		outfile.write('</div>')
-
 	if duties:=details.get('duties'):
 		outfile.write(bullet_points(duties, className='job_details'))
 outfile.write('</div>')
@@ -88,12 +80,6 @@ outfile.write('</div>')
 outfile.write('<div class="section">')
 outfile.write('<div class="section_header">Key Skills</div>')
 outfile.write(bullet_points(key_skills))
-outfile.write('</div>')
-
-#Additional Achievements
-outfile.write('<div class="section">')
-outfile.write('<div class="section_header">Additional Achievements</div>')
-outfile.write(bullet_points(additional_achievements))
 outfile.write('</div>')
 
 #Education

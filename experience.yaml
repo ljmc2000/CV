@@ -4,14 +4,13 @@ Citi Bank:
   start_date: Oct 2020
   end_date: Jun 2023
   duties:
-  - Developed regression tests for an internal web portal using the Selenium framework and Cucumber
-  - Onboarded new team members and helped them upskill
-  - Created educational resources for Selenium, Cucumber and some related libraries
-  - Organized code reviews to maintain and elevate code quality
-  - Suggested operational improvements such as linking BitBucket pull requests to Jira tasks.
-  - Led technical discussions about updates to project tech stack
-  - Developed some KNIME workflows and provided support to end users as part of the Citi KNIME team
-  - Translated some business infrastructure sybase SQL scripts to apache hadoop as part of sybase retirement project
+  - Developed regression tests for an internal web portal using the Selenium framework and Cucumber, discovering many bugs in the process
+  - Onboarded new team members and helped them upskill. Some of the people I helped train still message me occasionally when faced with a difficult challenge
+  - Created educational resources for Selenium, Cucumber and some related libraries which were well received by my teammates
+  - Suggested operational improvements like linking BitBucket pull requests to Jira tasks
+  - Led technical discussions about things such as updates to project tech stack ensuring the entire team had input and warning regarding potentially breaking changes
+  - Developed some KNIME workflows and provided support to non technical users as part of the Citi KNIME team
+  - Translated some operational SQL scripts to apache hadoop as part of sybase exit plan
   tech_stack:
   - Java
   - Selenium
@@ -29,10 +28,10 @@ Fidelity Investments:
   start_date: Jan 2019
   end_date: Aug 2019
   duties:
-  - Worked as part of a team to maintain and improve an internal tool written in Spring and AngularJS
-  - Created a proof of concept for a dockerized version of same application
-  - Designed dynamic components for said application to streamline integrating new features
-  - Helped deploy, configure, document and maintain the UAT and Production Apache servers which served the application
+  - Worked as part of a team to maintain and improve an internal tool written in Spring and AngularJS. Despite being an intern some of my patches made it into production
+  - Created a proof of concept for a dockerized version of same application demonstrating the possibility of migration to a microservices architecture
+  - Designed flexible components for said application to streamline adding new features
+  - Helped deploy, configure, document and maintain the UAT and Production Apache servers which served the application. When the SSL certificate expired the team referred to my handwritten notes
   tech_stack:
   - Java
   - Javascript
@@ -50,9 +49,13 @@ Treecraft:
   title: Tree Surgeon’s Assistant
   start_date: Jun 2018
   end_date: Sep 2018
+  duties:
+   - Cleaning up debris and feeding a wood chipper
 
 Dunnes Stores:
   company_summary: An Irish supermarket chain with in or around 18k employees
   title: Retail Assistant
   start_date: Oct 2013
   end_date: May 2014
+  duties:
+   - Stacking shelves and helping customers
